@@ -2,13 +2,13 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../dnh_chat_model.dart';
 
-part 'image_message.freezed.dart';
+part 'file_message.freezed.dart';
 
-part 'image_message.g.dart';
+part 'file_message.g.dart';
 
 @freezed
-class ImageMessage with Message, _$ImageMessage {
-  const factory ImageMessage({
+class FileMessage with Message, _$FileMessage {
+  const factory FileMessage({
     @Default(User()) User author,
     DateTime? createdAt,
     String? id,
@@ -23,10 +23,10 @@ class ImageMessage with Message, _$ImageMessage {
     @Default(MessageType.custom) MessageType type,
     DateTime? updatedAt,
     String? uri,
-    @Default([]) List<AttachmentInfo> uris,
     double? height,
-  }) = _ImageMessage;
+    @Default(0) num size,
+  }) = _FileMessage;
 
-  factory ImageMessage.fromJson(Map<String, dynamic> json) =>
-      _$ImageMessageFromJson(json);
+  factory FileMessage.fromJson(Map<String, dynamic> json) =>
+      _$FileMessageFromJson(json);
 }

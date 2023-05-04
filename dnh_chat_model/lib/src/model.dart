@@ -7,3 +7,7 @@ export 'models/quoted_message_info/quoted_message_info.dart';
 export 'models/text_message/text_message.dart';
 export 'models/user/user.dart';
 export 'models/chat_model.dart';
+export 'models/custom_message/custom_message.dart';
+export 'models/file_message/file_message.dart';
+export 'models/preview_data/preview_data.dart';
+export 'models/unsupport_message/unsupport_message.dart';

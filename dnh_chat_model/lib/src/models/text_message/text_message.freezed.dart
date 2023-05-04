@@ -20,20 +20,20 @@ TextMessage _$TextMessageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TextMessage {
-  String? get id => throw _privateConstructorUsedError;
-  bool get isOwn => throw _privateConstructorUsedError;
   User get author => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
-  String? get text => throw _privateConstructorUsedError;
-  MessageType get type => throw _privateConstructorUsedError;
-  Status get status => throw _privateConstructorUsedError;
-  QuotedMessageInfo? get quotedMessageInfo =>
-      throw _privateConstructorUsedError;
-  DateTime? get updatedAt => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   bool get isDeleted => throw _privateConstructorUsedError;
   bool get isEdited => throw _privateConstructorUsedError;
+  bool get isOwn => throw _privateConstructorUsedError;
   bool get isSeen => throw _privateConstructorUsedError;
   bool get isShowSeen => throw _privateConstructorUsedError;
+  QuotedMessageInfo? get quotedMessageInfo =>
+      throw _privateConstructorUsedError;
+  Status get status => throw _privateConstructorUsedError;
+  String? get text => throw _privateConstructorUsedError;
+  MessageType get type => throw _privateConstructorUsedError;
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -48,19 +48,19 @@ abstract class $TextMessageCopyWith<$Res> {
       _$TextMessageCopyWithImpl<$Res, TextMessage>;
   @useResult
   $Res call(
-      {String? id,
-      bool isOwn,
-      User author,
+      {User author,
       DateTime? createdAt,
-      String? text,
-      MessageType type,
-      Status status,
-      QuotedMessageInfo? quotedMessageInfo,
-      DateTime? updatedAt,
+      String? id,
       bool isDeleted,
       bool isEdited,
+      bool isOwn,
       bool isSeen,
-      bool isShowSeen});
+      bool isShowSeen,
+      QuotedMessageInfo? quotedMessageInfo,
+      Status status,
+      String? text,
+      MessageType type,
+      DateTime? updatedAt});
 
   $UserCopyWith<$Res> get author;
   $QuotedMessageInfoCopyWith<$Res>? get quotedMessageInfo;
@@ -79,29 +79,21 @@ class _$TextMessageCopyWithImpl<$Res, $Val extends TextMessage>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? isOwn = null,
     Object? author = null,
     Object? createdAt = freezed,
-    Object? text = freezed,
-    Object? type = null,
-    Object? status = null,
-    Object? quotedMessageInfo = freezed,
-    Object? updatedAt = freezed,
+    Object? id = freezed,
     Object? isDeleted = null,
     Object? isEdited = null,
+    Object? isOwn = null,
     Object? isSeen = null,
     Object? isShowSeen = null,
+    Object? quotedMessageInfo = freezed,
+    Object? status = null,
+    Object? text = freezed,
+    Object? type = null,
+    Object? updatedAt = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isOwn: null == isOwn
-          ? _value.isOwn
-          : isOwn // ignore: cast_nullable_to_non_nullable
-              as bool,
       author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -110,26 +102,10 @@ class _$TextMessageCopyWithImpl<$Res, $Val extends TextMessage>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as MessageType,
-      status: null == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as Status,
-      quotedMessageInfo: freezed == quotedMessageInfo
-          ? _value.quotedMessageInfo
-          : quotedMessageInfo // ignore: cast_nullable_to_non_nullable
-              as QuotedMessageInfo?,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
@@ -137,6 +113,10 @@ class _$TextMessageCopyWithImpl<$Res, $Val extends TextMessage>
       isEdited: null == isEdited
           ? _value.isEdited
           : isEdited // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isOwn: null == isOwn
+          ? _value.isOwn
+          : isOwn // ignore: cast_nullable_to_non_nullable
               as bool,
       isSeen: null == isSeen
           ? _value.isSeen
@@ -146,6 +126,26 @@ class _$TextMessageCopyWithImpl<$Res, $Val extends TextMessage>
           ? _value.isShowSeen
           : isShowSeen // ignore: cast_nullable_to_non_nullable
               as bool,
+      quotedMessageInfo: freezed == quotedMessageInfo
+          ? _value.quotedMessageInfo
+          : quotedMessageInfo // ignore: cast_nullable_to_non_nullable
+              as QuotedMessageInfo?,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Status,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as MessageType,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ) as $Val);
   }
 
@@ -179,19 +179,19 @@ abstract class _$$_TextMessageCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? id,
-      bool isOwn,
-      User author,
+      {User author,
       DateTime? createdAt,
-      String? text,
-      MessageType type,
-      Status status,
-      QuotedMessageInfo? quotedMessageInfo,
-      DateTime? updatedAt,
+      String? id,
       bool isDeleted,
       bool isEdited,
+      bool isOwn,
       bool isSeen,
-      bool isShowSeen});
+      bool isShowSeen,
+      QuotedMessageInfo? quotedMessageInfo,
+      Status status,
+      String? text,
+      MessageType type,
+      DateTime? updatedAt});
 
   @override
   $UserCopyWith<$Res> get author;
@@ -210,29 +210,21 @@ class __$$_TextMessageCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? isOwn = null,
     Object? author = null,
     Object? createdAt = freezed,
-    Object? text = freezed,
-    Object? type = null,
-    Object? status = null,
-    Object? quotedMessageInfo = freezed,
-    Object? updatedAt = freezed,
+    Object? id = freezed,
     Object? isDeleted = null,
     Object? isEdited = null,
+    Object? isOwn = null,
     Object? isSeen = null,
     Object? isShowSeen = null,
+    Object? quotedMessageInfo = freezed,
+    Object? status = null,
+    Object? text = freezed,
+    Object? type = null,
+    Object? updatedAt = freezed,
   }) {
     return _then(_$_TextMessage(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isOwn: null == isOwn
-          ? _value.isOwn
-          : isOwn // ignore: cast_nullable_to_non_nullable
-              as bool,
       author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -241,26 +233,10 @@ class __$$_TextMessageCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as MessageType,
-      status: null == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as Status,
-      quotedMessageInfo: freezed == quotedMessageInfo
-          ? _value.quotedMessageInfo
-          : quotedMessageInfo // ignore: cast_nullable_to_non_nullable
-              as QuotedMessageInfo?,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
@@ -268,6 +244,10 @@ class __$$_TextMessageCopyWithImpl<$Res>
       isEdited: null == isEdited
           ? _value.isEdited
           : isEdited // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isOwn: null == isOwn
+          ? _value.isOwn
+          : isOwn // ignore: cast_nullable_to_non_nullable
               as bool,
       isSeen: null == isSeen
           ? _value.isSeen
@@ -277,6 +257,26 @@ class __$$_TextMessageCopyWithImpl<$Res>
           ? _value.isShowSeen
           : isShowSeen // ignore: cast_nullable_to_non_nullable
               as bool,
+      quotedMessageInfo: freezed == quotedMessageInfo
+          ? _value.quotedMessageInfo
+          : quotedMessageInfo // ignore: cast_nullable_to_non_nullable
+              as QuotedMessageInfo?,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Status,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as MessageType,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -285,45 +285,30 @@ class __$$_TextMessageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TextMessage implements _TextMessage {
   const _$_TextMessage(
-      {this.id,
-      this.isOwn = false,
-      this.author = const User(),
+      {this.author = const User(),
       this.createdAt,
-      this.text,
-      this.type = MessageType.text,
-      this.status = Status.delivered,
-      this.quotedMessageInfo,
-      this.updatedAt,
+      this.id,
       this.isDeleted = false,
       this.isEdited = false,
+      this.isOwn = false,
       this.isSeen = false,
-      this.isShowSeen = false});
+      this.isShowSeen = false,
+      this.quotedMessageInfo,
+      this.status = Status.delivered,
+      this.text,
+      this.type = MessageType.custom,
+      this.updatedAt});
 
   factory _$_TextMessage.fromJson(Map<String, dynamic> json) =>
       _$$_TextMessageFromJson(json);
 
-  @override
-  final String? id;
-  @override
-  @JsonKey()
-  final bool isOwn;
   @override
   @JsonKey()
   final User author;
   @override
   final DateTime? createdAt;
   @override
-  final String? text;
-  @override
-  @JsonKey()
-  final MessageType type;
-  @override
-  @JsonKey()
-  final Status status;
-  @override
-  final QuotedMessageInfo? quotedMessageInfo;
-  @override
-  final DateTime? updatedAt;
+  final String? id;
   @override
   @JsonKey()
   final bool isDeleted;
@@ -332,14 +317,29 @@ class _$_TextMessage implements _TextMessage {
   final bool isEdited;
   @override
   @JsonKey()
+  final bool isOwn;
+  @override
+  @JsonKey()
   final bool isSeen;
   @override
   @JsonKey()
   final bool isShowSeen;
+  @override
+  final QuotedMessageInfo? quotedMessageInfo;
+  @override
+  @JsonKey()
+  final Status status;
+  @override
+  final String? text;
+  @override
+  @JsonKey()
+  final MessageType type;
+  @override
+  final DateTime? updatedAt;
 
   @override
   String toString() {
-    return 'TextMessage(id: $id, isOwn: $isOwn, author: $author, createdAt: $createdAt, text: $text, type: $type, status: $status, quotedMessageInfo: $quotedMessageInfo, updatedAt: $updatedAt, isDeleted: $isDeleted, isEdited: $isEdited, isSeen: $isSeen, isShowSeen: $isShowSeen)';
+    return 'TextMessage(author: $author, createdAt: $createdAt, id: $id, isDeleted: $isDeleted, isEdited: $isEdited, isOwn: $isOwn, isSeen: $isSeen, isShowSeen: $isShowSeen, quotedMessageInfo: $quotedMessageInfo, status: $status, text: $text, type: $type, updatedAt: $updatedAt)';
   }
 
   @override
@@ -347,44 +347,44 @@ class _$_TextMessage implements _TextMessage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_TextMessage &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.isOwn, isOwn) || other.isOwn == isOwn) &&
             (identical(other.author, author) || other.author == author) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
-            (identical(other.text, text) || other.text == text) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.quotedMessageInfo, quotedMessageInfo) ||
-                other.quotedMessageInfo == quotedMessageInfo) &&
-            (identical(other.updatedAt, updatedAt) ||
-                other.updatedAt == updatedAt) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.isDeleted, isDeleted) ||
                 other.isDeleted == isDeleted) &&
             (identical(other.isEdited, isEdited) ||
                 other.isEdited == isEdited) &&
+            (identical(other.isOwn, isOwn) || other.isOwn == isOwn) &&
             (identical(other.isSeen, isSeen) || other.isSeen == isSeen) &&
             (identical(other.isShowSeen, isShowSeen) ||
-                other.isShowSeen == isShowSeen));
+                other.isShowSeen == isShowSeen) &&
+            (identical(other.quotedMessageInfo, quotedMessageInfo) ||
+                other.quotedMessageInfo == quotedMessageInfo) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.text, text) || other.text == text) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.updatedAt, updatedAt) ||
+                other.updatedAt == updatedAt));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
-      isOwn,
       author,
       createdAt,
-      text,
-      type,
-      status,
-      quotedMessageInfo,
-      updatedAt,
+      id,
       isDeleted,
       isEdited,
+      isOwn,
       isSeen,
-      isShowSeen);
+      isShowSeen,
+      quotedMessageInfo,
+      status,
+      text,
+      type,
+      updatedAt);
 
   @JsonKey(ignore: true)
   @override
@@ -402,49 +402,49 @@ class _$_TextMessage implements _TextMessage {
 
 abstract class _TextMessage implements TextMessage {
   const factory _TextMessage(
-      {final String? id,
-      final bool isOwn,
-      final User author,
+      {final User author,
       final DateTime? createdAt,
-      final String? text,
-      final MessageType type,
-      final Status status,
-      final QuotedMessageInfo? quotedMessageInfo,
-      final DateTime? updatedAt,
+      final String? id,
       final bool isDeleted,
       final bool isEdited,
+      final bool isOwn,
       final bool isSeen,
-      final bool isShowSeen}) = _$_TextMessage;
+      final bool isShowSeen,
+      final QuotedMessageInfo? quotedMessageInfo,
+      final Status status,
+      final String? text,
+      final MessageType type,
+      final DateTime? updatedAt}) = _$_TextMessage;
 
   factory _TextMessage.fromJson(Map<String, dynamic> json) =
       _$_TextMessage.fromJson;
 
   @override
-  String? get id;
-  @override
-  bool get isOwn;
-  @override
   User get author;
   @override
   DateTime? get createdAt;
   @override
-  String? get text;
-  @override
-  MessageType get type;
-  @override
-  Status get status;
-  @override
-  QuotedMessageInfo? get quotedMessageInfo;
-  @override
-  DateTime? get updatedAt;
+  String? get id;
   @override
   bool get isDeleted;
   @override
   bool get isEdited;
   @override
+  bool get isOwn;
+  @override
   bool get isSeen;
   @override
   bool get isShowSeen;
+  @override
+  QuotedMessageInfo? get quotedMessageInfo;
+  @override
+  Status get status;
+  @override
+  String? get text;
+  @override
+  MessageType get type;
+  @override
+  DateTime? get updatedAt;
   @override
   @JsonKey(ignore: true)
   _$$_TextMessageCopyWith<_$_TextMessage> get copyWith =>

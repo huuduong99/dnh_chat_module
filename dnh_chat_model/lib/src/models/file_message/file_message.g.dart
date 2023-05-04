@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'text_message.dart';
+part of 'file_message.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TextMessage _$$_TextMessageFromJson(Map<String, dynamic> json) =>
-    _$_TextMessage(
+_$_FileMessage _$$_FileMessageFromJson(Map<String, dynamic> json) =>
+    _$_FileMessage(
       author: json['author'] == null
           ? const User()
           : User.fromJson(json['author'] as Map<String, dynamic>),
@@ -32,9 +32,12 @@ _$_TextMessage _$$_TextMessageFromJson(Map<String, dynamic> json) =>
       updatedAt: json['updatedAt'] == null
           ? null
           : DateTime.parse(json['updatedAt'] as String),
+      uri: json['uri'] as String?,
+      height: (json['height'] as num?)?.toDouble(),
+      size: json['size'] as num? ?? 0,
     );
 
-Map<String, dynamic> _$$_TextMessageToJson(_$_TextMessage instance) =>
+Map<String, dynamic> _$$_FileMessageToJson(_$_FileMessage instance) =>
     <String, dynamic>{
       'author': instance.author,
       'createdAt': instance.createdAt?.toIso8601String(),
@@ -49,6 +52,9 @@ Map<String, dynamic> _$$_TextMessageToJson(_$_TextMessage instance) =>
       'text': instance.text,
       'type': _$MessageTypeEnumMap[instance.type]!,
       'updatedAt': instance.updatedAt?.toIso8601String(),
+      'uri': instance.uri,
+      'height': instance.height,
+      'size': instance.size,
     };
 
 const _$StatusEnumMap = {

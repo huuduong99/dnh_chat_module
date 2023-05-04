@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'text_message.dart';
+part of 'custom_message.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TextMessage _$$_TextMessageFromJson(Map<String, dynamic> json) =>
-    _$_TextMessage(
+_$_CustomMessage _$$_CustomMessageFromJson(Map<String, dynamic> json) =>
+    _$_CustomMessage(
       author: json['author'] == null
           ? const User()
           : User.fromJson(json['author'] as Map<String, dynamic>),
@@ -34,7 +34,7 @@ _$_TextMessage _$$_TextMessageFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['updatedAt'] as String),
     );
 
-Map<String, dynamic> _$$_TextMessageToJson(_$_TextMessage instance) =>
+Map<String, dynamic> _$$_CustomMessageToJson(_$_CustomMessage instance) =>
     <String, dynamic>{
       'author': instance.author,
       'createdAt': instance.createdAt?.toIso8601String(),

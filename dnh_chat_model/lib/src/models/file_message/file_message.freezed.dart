@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'image_message.dart';
+part of 'file_message.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-ImageMessage _$ImageMessageFromJson(Map<String, dynamic> json) {
-  return _ImageMessage.fromJson(json);
+FileMessage _$FileMessageFromJson(Map<String, dynamic> json) {
+  return _FileMessage.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ImageMessage {
+mixin _$FileMessage {
   User get author => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
@@ -35,20 +35,20 @@ mixin _$ImageMessage {
   MessageType get type => throw _privateConstructorUsedError;
   DateTime? get updatedAt => throw _privateConstructorUsedError;
   String? get uri => throw _privateConstructorUsedError;
-  List<AttachmentInfo> get uris => throw _privateConstructorUsedError;
   double? get height => throw _privateConstructorUsedError;
+  num get size => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ImageMessageCopyWith<ImageMessage> get copyWith =>
+  $FileMessageCopyWith<FileMessage> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ImageMessageCopyWith<$Res> {
-  factory $ImageMessageCopyWith(
-          ImageMessage value, $Res Function(ImageMessage) then) =
-      _$ImageMessageCopyWithImpl<$Res, ImageMessage>;
+abstract class $FileMessageCopyWith<$Res> {
+  factory $FileMessageCopyWith(
+          FileMessage value, $Res Function(FileMessage) then) =
+      _$FileMessageCopyWithImpl<$Res, FileMessage>;
   @useResult
   $Res call(
       {User author,
@@ -65,17 +65,17 @@ abstract class $ImageMessageCopyWith<$Res> {
       MessageType type,
       DateTime? updatedAt,
       String? uri,
-      List<AttachmentInfo> uris,
-      double? height});
+      double? height,
+      num size});
 
   $UserCopyWith<$Res> get author;
   $QuotedMessageInfoCopyWith<$Res>? get quotedMessageInfo;
 }
 
 /// @nodoc
-class _$ImageMessageCopyWithImpl<$Res, $Val extends ImageMessage>
-    implements $ImageMessageCopyWith<$Res> {
-  _$ImageMessageCopyWithImpl(this._value, this._then);
+class _$FileMessageCopyWithImpl<$Res, $Val extends FileMessage>
+    implements $FileMessageCopyWith<$Res> {
+  _$FileMessageCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -99,8 +99,8 @@ class _$ImageMessageCopyWithImpl<$Res, $Val extends ImageMessage>
     Object? type = null,
     Object? updatedAt = freezed,
     Object? uri = freezed,
-    Object? uris = null,
     Object? height = freezed,
+    Object? size = null,
   }) {
     return _then(_value.copyWith(
       author: null == author
@@ -159,14 +159,14 @@ class _$ImageMessageCopyWithImpl<$Res, $Val extends ImageMessage>
           ? _value.uri
           : uri // ignore: cast_nullable_to_non_nullable
               as String?,
-      uris: null == uris
-          ? _value.uris
-          : uris // ignore: cast_nullable_to_non_nullable
-              as List<AttachmentInfo>,
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as double?,
+      size: null == size
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as num,
     ) as $Val);
   }
 
@@ -192,11 +192,11 @@ class _$ImageMessageCopyWithImpl<$Res, $Val extends ImageMessage>
 }
 
 /// @nodoc
-abstract class _$$_ImageMessageCopyWith<$Res>
-    implements $ImageMessageCopyWith<$Res> {
-  factory _$$_ImageMessageCopyWith(
-          _$_ImageMessage value, $Res Function(_$_ImageMessage) then) =
-      __$$_ImageMessageCopyWithImpl<$Res>;
+abstract class _$$_FileMessageCopyWith<$Res>
+    implements $FileMessageCopyWith<$Res> {
+  factory _$$_FileMessageCopyWith(
+          _$_FileMessage value, $Res Function(_$_FileMessage) then) =
+      __$$_FileMessageCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -214,8 +214,8 @@ abstract class _$$_ImageMessageCopyWith<$Res>
       MessageType type,
       DateTime? updatedAt,
       String? uri,
-      List<AttachmentInfo> uris,
-      double? height});
+      double? height,
+      num size});
 
   @override
   $UserCopyWith<$Res> get author;
@@ -224,11 +224,11 @@ abstract class _$$_ImageMessageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ImageMessageCopyWithImpl<$Res>
-    extends _$ImageMessageCopyWithImpl<$Res, _$_ImageMessage>
-    implements _$$_ImageMessageCopyWith<$Res> {
-  __$$_ImageMessageCopyWithImpl(
-      _$_ImageMessage _value, $Res Function(_$_ImageMessage) _then)
+class __$$_FileMessageCopyWithImpl<$Res>
+    extends _$FileMessageCopyWithImpl<$Res, _$_FileMessage>
+    implements _$$_FileMessageCopyWith<$Res> {
+  __$$_FileMessageCopyWithImpl(
+      _$_FileMessage _value, $Res Function(_$_FileMessage) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -248,10 +248,10 @@ class __$$_ImageMessageCopyWithImpl<$Res>
     Object? type = null,
     Object? updatedAt = freezed,
     Object? uri = freezed,
-    Object? uris = null,
     Object? height = freezed,
+    Object? size = null,
   }) {
-    return _then(_$_ImageMessage(
+    return _then(_$_FileMessage(
       author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -308,22 +308,22 @@ class __$$_ImageMessageCopyWithImpl<$Res>
           ? _value.uri
           : uri // ignore: cast_nullable_to_non_nullable
               as String?,
-      uris: null == uris
-          ? _value._uris
-          : uris // ignore: cast_nullable_to_non_nullable
-              as List<AttachmentInfo>,
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as double?,
+      size: null == size
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as num,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_ImageMessage implements _ImageMessage {
-  const _$_ImageMessage(
+class _$_FileMessage implements _FileMessage {
+  const _$_FileMessage(
       {this.author = const User(),
       this.createdAt,
       this.id,
@@ -338,12 +338,11 @@ class _$_ImageMessage implements _ImageMessage {
       this.type = MessageType.custom,
       this.updatedAt,
       this.uri,
-      final List<AttachmentInfo> uris = const [],
-      this.height})
-      : _uris = uris;
+      this.height,
+      this.size = 0});
 
-  factory _$_ImageMessage.fromJson(Map<String, dynamic> json) =>
-      _$$_ImageMessageFromJson(json);
+  factory _$_FileMessage.fromJson(Map<String, dynamic> json) =>
+      _$$_FileMessageFromJson(json);
 
   @override
   @JsonKey()
@@ -381,28 +380,22 @@ class _$_ImageMessage implements _ImageMessage {
   final DateTime? updatedAt;
   @override
   final String? uri;
-  final List<AttachmentInfo> _uris;
-  @override
-  @JsonKey()
-  List<AttachmentInfo> get uris {
-    if (_uris is EqualUnmodifiableListView) return _uris;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_uris);
-  }
-
   @override
   final double? height;
+  @override
+  @JsonKey()
+  final num size;
 
   @override
   String toString() {
-    return 'ImageMessage(author: $author, createdAt: $createdAt, id: $id, isDeleted: $isDeleted, isEdited: $isEdited, isOwn: $isOwn, isSeen: $isSeen, isShowSeen: $isShowSeen, quotedMessageInfo: $quotedMessageInfo, status: $status, text: $text, type: $type, updatedAt: $updatedAt, uri: $uri, uris: $uris, height: $height)';
+    return 'FileMessage(author: $author, createdAt: $createdAt, id: $id, isDeleted: $isDeleted, isEdited: $isEdited, isOwn: $isOwn, isSeen: $isSeen, isShowSeen: $isShowSeen, quotedMessageInfo: $quotedMessageInfo, status: $status, text: $text, type: $type, updatedAt: $updatedAt, uri: $uri, height: $height, size: $size)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ImageMessage &&
+            other is _$_FileMessage &&
             (identical(other.author, author) || other.author == author) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
@@ -423,8 +416,8 @@ class _$_ImageMessage implements _ImageMessage {
             (identical(other.updatedAt, updatedAt) ||
                 other.updatedAt == updatedAt) &&
             (identical(other.uri, uri) || other.uri == uri) &&
-            const DeepCollectionEquality().equals(other._uris, _uris) &&
-            (identical(other.height, height) || other.height == height));
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.size, size) || other.size == size));
   }
 
   @JsonKey(ignore: true)
@@ -445,25 +438,25 @@ class _$_ImageMessage implements _ImageMessage {
       type,
       updatedAt,
       uri,
-      const DeepCollectionEquality().hash(_uris),
-      height);
+      height,
+      size);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ImageMessageCopyWith<_$_ImageMessage> get copyWith =>
-      __$$_ImageMessageCopyWithImpl<_$_ImageMessage>(this, _$identity);
+  _$$_FileMessageCopyWith<_$_FileMessage> get copyWith =>
+      __$$_FileMessageCopyWithImpl<_$_FileMessage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImageMessageToJson(
+    return _$$_FileMessageToJson(
       this,
     );
   }
 }
 
-abstract class _ImageMessage implements ImageMessage {
-  const factory _ImageMessage(
+abstract class _FileMessage implements FileMessage {
+  const factory _FileMessage(
       {final User author,
       final DateTime? createdAt,
       final String? id,
@@ -478,11 +471,11 @@ abstract class _ImageMessage implements ImageMessage {
       final MessageType type,
       final DateTime? updatedAt,
       final String? uri,
-      final List<AttachmentInfo> uris,
-      final double? height}) = _$_ImageMessage;
+      final double? height,
+      final num size}) = _$_FileMessage;
 
-  factory _ImageMessage.fromJson(Map<String, dynamic> json) =
-      _$_ImageMessage.fromJson;
+  factory _FileMessage.fromJson(Map<String, dynamic> json) =
+      _$_FileMessage.fromJson;
 
   @override
   User get author;
@@ -513,11 +506,11 @@ abstract class _ImageMessage implements ImageMessage {
   @override
   String? get uri;
   @override
-  List<AttachmentInfo> get uris;
-  @override
   double? get height;
   @override
+  num get size;
+  @override
   @JsonKey(ignore: true)
-  _$$_ImageMessageCopyWith<_$_ImageMessage> get copyWith =>
+  _$$_FileMessageCopyWith<_$_FileMessage> get copyWith =>
       throw _privateConstructorUsedError;
 }

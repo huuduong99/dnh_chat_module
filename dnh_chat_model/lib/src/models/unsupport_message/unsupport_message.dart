@@ -2,13 +2,13 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../dnh_chat_model.dart';
 
-part 'image_message.freezed.dart';
+part 'unsupport_message.freezed.dart';
 
-part 'image_message.g.dart';
+part 'unsupport_message.g.dart';
 
 @freezed
-class ImageMessage with Message, _$ImageMessage {
-  const factory ImageMessage({
+class UnSupportMessage with Message, _$UnSupportMessage {
+  const factory UnSupportMessage({
     @Default(User()) User author,
     DateTime? createdAt,
     String? id,
@@ -22,11 +22,8 @@ class ImageMessage with Message, _$ImageMessage {
     String? text,
     @Default(MessageType.custom) MessageType type,
     DateTime? updatedAt,
-    String? uri,
-    @Default([]) List<AttachmentInfo> uris,
-    double? height,
-  }) = _ImageMessage;
+  }) = _UnSupportMessage;
 
-  factory ImageMessage.fromJson(Map<String, dynamic> json) =>
-      _$ImageMessageFromJson(json);
+  factory UnSupportMessage.fromJson(Map<String, dynamic> json) =>
+      _$UnSupportMessageFromJson(json);
 }
