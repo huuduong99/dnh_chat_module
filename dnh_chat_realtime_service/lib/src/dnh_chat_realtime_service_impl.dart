@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:convert';
 import 'package:dnh_logger/dnh_logger.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rxdart/rxdart.dart';
@@ -86,7 +85,7 @@ class DnhChatRealtimeServiceImpl extends Cubit<DnhChatRealtimeState>
         if (data != null) {
           emit(
             DnhChatRealtimeState.messageCreated(
-              mapData: jsonEncode(data),
+              mapData: data,
             ),
           );
         }

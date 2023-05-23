@@ -19,7 +19,8 @@ mixin _$DnhChatRealtimeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(String mapData, String? socketId) messageCreated,
+    required TResult Function(Map<String, dynamic> mapData, String? socketId)
+        messageCreated,
     required TResult Function(
             String recipientId,
             String senderId,
@@ -33,7 +34,8 @@ mixin _$DnhChatRealtimeState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(String mapData, String? socketId)? messageCreated,
+    TResult? Function(Map<String, dynamic> mapData, String? socketId)?
+        messageCreated,
     TResult? Function(String recipientId, String senderId, DateTime seenTime,
             String conversationId, String sendFrom, String? socketId)?
         messageSeen,
@@ -42,7 +44,8 @@ mixin _$DnhChatRealtimeState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String mapData, String? socketId)? messageCreated,
+    TResult Function(Map<String, dynamic> mapData, String? socketId)?
+        messageCreated,
     TResult Function(String recipientId, String senderId, DateTime seenTime,
             String conversationId, String sendFrom, String? socketId)?
         messageSeen,
@@ -127,7 +130,8 @@ class _$DnhChatRealtimeStateIntial implements DnhChatRealtimeStateIntial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(String mapData, String? socketId) messageCreated,
+    required TResult Function(Map<String, dynamic> mapData, String? socketId)
+        messageCreated,
     required TResult Function(
             String recipientId,
             String senderId,
@@ -144,7 +148,8 @@ class _$DnhChatRealtimeStateIntial implements DnhChatRealtimeStateIntial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(String mapData, String? socketId)? messageCreated,
+    TResult? Function(Map<String, dynamic> mapData, String? socketId)?
+        messageCreated,
     TResult? Function(String recipientId, String senderId, DateTime seenTime,
             String conversationId, String sendFrom, String? socketId)?
         messageSeen,
@@ -156,7 +161,8 @@ class _$DnhChatRealtimeStateIntial implements DnhChatRealtimeStateIntial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String mapData, String? socketId)? messageCreated,
+    TResult Function(Map<String, dynamic> mapData, String? socketId)?
+        messageCreated,
     TResult Function(String recipientId, String senderId, DateTime seenTime,
             String conversationId, String sendFrom, String? socketId)?
         messageSeen,
@@ -216,7 +222,7 @@ abstract class _$$DnhChatRealtimeStateMessageCreatedCopyWith<$Res> {
           $Res Function(_$DnhChatRealtimeStateMessageCreated) then) =
       __$$DnhChatRealtimeStateMessageCreatedCopyWithImpl<$Res>;
   @useResult
-  $Res call({String mapData, String? socketId});
+  $Res call({Map<String, dynamic> mapData, String? socketId});
 }
 
 /// @nodoc
@@ -237,9 +243,9 @@ class __$$DnhChatRealtimeStateMessageCreatedCopyWithImpl<$Res>
   }) {
     return _then(_$DnhChatRealtimeStateMessageCreated(
       mapData: null == mapData
-          ? _value.mapData
+          ? _value._mapData
           : mapData // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Map<String, dynamic>,
       socketId: freezed == socketId
           ? _value.socketId
           : socketId // ignore: cast_nullable_to_non_nullable
@@ -253,10 +259,17 @@ class __$$DnhChatRealtimeStateMessageCreatedCopyWithImpl<$Res>
 class _$DnhChatRealtimeStateMessageCreated
     implements DnhChatRealtimeStateMessageCreated {
   const _$DnhChatRealtimeStateMessageCreated(
-      {required this.mapData, this.socketId});
+      {required final Map<String, dynamic> mapData, this.socketId})
+      : _mapData = mapData;
 
+  final Map<String, dynamic> _mapData;
   @override
-  final String mapData;
+  Map<String, dynamic> get mapData {
+    if (_mapData is EqualUnmodifiableMapView) return _mapData;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_mapData);
+  }
+
   @override
   final String? socketId;
 
@@ -277,7 +290,8 @@ class _$DnhChatRealtimeStateMessageCreated
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(String mapData, String? socketId) messageCreated,
+    required TResult Function(Map<String, dynamic> mapData, String? socketId)
+        messageCreated,
     required TResult Function(
             String recipientId,
             String senderId,
@@ -294,7 +308,8 @@ class _$DnhChatRealtimeStateMessageCreated
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(String mapData, String? socketId)? messageCreated,
+    TResult? Function(Map<String, dynamic> mapData, String? socketId)?
+        messageCreated,
     TResult? Function(String recipientId, String senderId, DateTime seenTime,
             String conversationId, String sendFrom, String? socketId)?
         messageSeen,
@@ -306,7 +321,8 @@ class _$DnhChatRealtimeStateMessageCreated
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String mapData, String? socketId)? messageCreated,
+    TResult Function(Map<String, dynamic> mapData, String? socketId)?
+        messageCreated,
     TResult Function(String recipientId, String senderId, DateTime seenTime,
             String conversationId, String sendFrom, String? socketId)?
         messageSeen,
@@ -358,10 +374,10 @@ class _$DnhChatRealtimeStateMessageCreated
 abstract class DnhChatRealtimeStateMessageCreated
     implements DnhChatRealtimeState {
   const factory DnhChatRealtimeStateMessageCreated(
-      {required final String mapData,
+      {required final Map<String, dynamic> mapData,
       final String? socketId}) = _$DnhChatRealtimeStateMessageCreated;
 
-  String get mapData;
+  Map<String, dynamic> get mapData;
   String? get socketId;
   @JsonKey(ignore: true)
   _$$DnhChatRealtimeStateMessageCreatedCopyWith<
@@ -475,7 +491,8 @@ class _$DnhChatRealtimeStateMessageSeen
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(String mapData, String? socketId) messageCreated,
+    required TResult Function(Map<String, dynamic> mapData, String? socketId)
+        messageCreated,
     required TResult Function(
             String recipientId,
             String senderId,
@@ -493,7 +510,8 @@ class _$DnhChatRealtimeStateMessageSeen
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(String mapData, String? socketId)? messageCreated,
+    TResult? Function(Map<String, dynamic> mapData, String? socketId)?
+        messageCreated,
     TResult? Function(String recipientId, String senderId, DateTime seenTime,
             String conversationId, String sendFrom, String? socketId)?
         messageSeen,
@@ -506,7 +524,8 @@ class _$DnhChatRealtimeStateMessageSeen
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String mapData, String? socketId)? messageCreated,
+    TResult Function(Map<String, dynamic> mapData, String? socketId)?
+        messageCreated,
     TResult Function(String recipientId, String senderId, DateTime seenTime,
             String conversationId, String sendFrom, String? socketId)?
         messageSeen,

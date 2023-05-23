@@ -14,12 +14,12 @@ class DnhRealtimeState with _$DnhRealtimeState {
   const factory DnhRealtimeState.initial() = DnhRealtimeStateIntial;
 
   const factory DnhRealtimeState.commentAdded({
-    required String commentData,
+    required Map<String, dynamic> commentData,
     String? socketId,
   }) = DnhRealtimeStateCommentAdded;
 
   const factory DnhRealtimeState.commentUpdated({
-    required String commentData,
+    required Map<String, dynamic> commentData,
     String? socketId,
   }) = DnhRealtimeStateCommentUpdated;
 
@@ -46,7 +46,7 @@ class DnhRealtimeState with _$DnhRealtimeState {
   }) = RealtiemStatePostDeleted;
 
   const factory DnhRealtimeState.liveClosed({
-    required String postData,
+    required Map<String, dynamic> postData,
     String? socketId,
   }) = DnhRealtimeStateLiveClosed;
 
@@ -67,7 +67,7 @@ class DnhRealtimeState with _$DnhRealtimeState {
   }) = DnhRealtimeStateSocketConnected;
 
   const factory DnhRealtimeState.liveRecordStopped({
-    required String postData,
+    required Map<String, dynamic> postData,
     String? socketId,
   }) = DnhRealtimeStateLiveRecordStopped;
 

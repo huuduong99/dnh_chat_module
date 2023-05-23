@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:convert';
 
 import 'package:dnh_logger/dnh_logger.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -255,7 +254,7 @@ class DnhRealtimeServiceImpl extends Cubit<DnhRealtimeState>
 
         emit(
           DnhRealtimeState.commentAdded(
-            commentData: jsonEncode(data),
+            commentData: data,
             socketId: socketId,
           ),
         );
@@ -266,7 +265,7 @@ class DnhRealtimeServiceImpl extends Cubit<DnhRealtimeState>
 
         emit(
           DnhRealtimeState.commentUpdated(
-            commentData: jsonEncode(data),
+            commentData: data,
             socketId: socketId,
           ),
         );
@@ -290,7 +289,7 @@ class DnhRealtimeServiceImpl extends Cubit<DnhRealtimeState>
 
         emit(
           DnhRealtimeState.postAdded(
-            postData: jsonEncode(data),
+            postData: data,
             socketId: socketId,
           ),
         );
@@ -301,7 +300,7 @@ class DnhRealtimeServiceImpl extends Cubit<DnhRealtimeState>
 
         emit(
           DnhRealtimeState.postUpdated(
-            postData: jsonEncode(data),
+            postData: data,
             socketId: socketId,
           ),
         );
@@ -353,7 +352,7 @@ class DnhRealtimeServiceImpl extends Cubit<DnhRealtimeState>
 
         emit(
           DnhRealtimeState.liveRecordStopped(
-            postData: jsonEncode(data),
+            postData: data,
             socketId: socketId,
           ),
         );
@@ -364,7 +363,7 @@ class DnhRealtimeServiceImpl extends Cubit<DnhRealtimeState>
 
         emit(
           DnhRealtimeState.liveClosed(
-            postData: jsonEncode(data),
+            postData: data,
             socketId: socketId,
           ),
         );
@@ -387,7 +386,7 @@ class DnhRealtimeServiceImpl extends Cubit<DnhRealtimeState>
       case LiveSocketEvent.userStatusReceived:
         emit(
           DnhRealtimeState.userStatusReceived(
-            listUserStatus: jsonEncode(data),
+            listUserStatus: data,
           ),
         );
         break;
@@ -395,7 +394,7 @@ class DnhRealtimeServiceImpl extends Cubit<DnhRealtimeState>
       case LiveSocketEvent.userStatusChanged:
         emit(
           DnhRealtimeState.userStatusChanged(
-            userStatus: jsonEncode(data),
+            userStatus: data,
           ),
         );
         break;

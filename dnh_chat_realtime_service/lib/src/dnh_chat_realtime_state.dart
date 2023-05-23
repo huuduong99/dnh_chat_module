@@ -4,11 +4,10 @@ part 'dnh_chat_realtime_state.freezed.dart';
 
 @Freezed(equal: false)
 class DnhChatRealtimeState with _$DnhChatRealtimeState {
-  const factory DnhChatRealtimeState.initial() =
-      DnhChatRealtimeStateIntial;
+  const factory DnhChatRealtimeState.initial() = DnhChatRealtimeStateIntial;
 
   const factory DnhChatRealtimeState.messageCreated({
-    required String mapData,
+    required Map<String, dynamic> mapData,
     String? socketId,
   }) = DnhChatRealtimeStateMessageCreated;
 

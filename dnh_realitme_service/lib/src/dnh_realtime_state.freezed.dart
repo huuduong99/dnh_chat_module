@@ -20,9 +20,11 @@ mixin _$DnhRealtimeState {
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -31,13 +33,14 @@ mixin _$DnhRealtimeState {
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -58,18 +61,22 @@ mixin _$DnhRealtimeState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -87,18 +94,22 @@ mixin _$DnhRealtimeState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -300,9 +311,11 @@ class _$DnhRealtimeStateViewCountChanged
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -311,13 +324,14 @@ class _$DnhRealtimeStateViewCountChanged
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -341,18 +355,22 @@ class _$DnhRealtimeStateViewCountChanged
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -373,18 +391,22 @@ class _$DnhRealtimeStateViewCountChanged
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -559,9 +581,11 @@ class _$DnhRealtimeStateIntial implements DnhRealtimeStateIntial {
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -570,13 +594,14 @@ class _$DnhRealtimeStateIntial implements DnhRealtimeStateIntial {
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -600,18 +625,22 @@ class _$DnhRealtimeStateIntial implements DnhRealtimeStateIntial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -632,18 +661,22 @@ class _$DnhRealtimeStateIntial implements DnhRealtimeStateIntial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -785,7 +818,7 @@ abstract class _$$DnhRealtimeStateCommentAddedCopyWith<$Res> {
           $Res Function(_$DnhRealtimeStateCommentAdded) then) =
       __$$DnhRealtimeStateCommentAddedCopyWithImpl<$Res>;
   @useResult
-  $Res call({String commentData, String? socketId});
+  $Res call({Map<String, dynamic> commentData, String? socketId});
 }
 
 /// @nodoc
@@ -805,9 +838,9 @@ class __$$DnhRealtimeStateCommentAddedCopyWithImpl<$Res>
   }) {
     return _then(_$DnhRealtimeStateCommentAdded(
       commentData: null == commentData
-          ? _value.commentData
+          ? _value._commentData
           : commentData // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Map<String, dynamic>,
       socketId: freezed == socketId
           ? _value.socketId
           : socketId // ignore: cast_nullable_to_non_nullable
@@ -820,10 +853,17 @@ class __$$DnhRealtimeStateCommentAddedCopyWithImpl<$Res>
 
 class _$DnhRealtimeStateCommentAdded implements DnhRealtimeStateCommentAdded {
   const _$DnhRealtimeStateCommentAdded(
-      {required this.commentData, this.socketId});
+      {required final Map<String, dynamic> commentData, this.socketId})
+      : _commentData = commentData;
 
+  final Map<String, dynamic> _commentData;
   @override
-  final String commentData;
+  Map<String, dynamic> get commentData {
+    if (_commentData is EqualUnmodifiableMapView) return _commentData;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_commentData);
+  }
+
   @override
   final String? socketId;
 
@@ -844,9 +884,11 @@ class _$DnhRealtimeStateCommentAdded implements DnhRealtimeStateCommentAdded {
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -855,13 +897,14 @@ class _$DnhRealtimeStateCommentAdded implements DnhRealtimeStateCommentAdded {
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -885,18 +928,22 @@ class _$DnhRealtimeStateCommentAdded implements DnhRealtimeStateCommentAdded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -917,18 +964,22 @@ class _$DnhRealtimeStateCommentAdded implements DnhRealtimeStateCommentAdded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -1061,10 +1112,10 @@ class _$DnhRealtimeStateCommentAdded implements DnhRealtimeStateCommentAdded {
 
 abstract class DnhRealtimeStateCommentAdded implements DnhRealtimeState {
   const factory DnhRealtimeStateCommentAdded(
-      {required final String commentData,
+      {required final Map<String, dynamic> commentData,
       final String? socketId}) = _$DnhRealtimeStateCommentAdded;
 
-  String get commentData;
+  Map<String, dynamic> get commentData;
   String? get socketId;
   @JsonKey(ignore: true)
   _$$DnhRealtimeStateCommentAddedCopyWith<_$DnhRealtimeStateCommentAdded>
@@ -1078,7 +1129,7 @@ abstract class _$$DnhRealtimeStateCommentUpdatedCopyWith<$Res> {
           $Res Function(_$DnhRealtimeStateCommentUpdated) then) =
       __$$DnhRealtimeStateCommentUpdatedCopyWithImpl<$Res>;
   @useResult
-  $Res call({String commentData, String? socketId});
+  $Res call({Map<String, dynamic> commentData, String? socketId});
 }
 
 /// @nodoc
@@ -1099,9 +1150,9 @@ class __$$DnhRealtimeStateCommentUpdatedCopyWithImpl<$Res>
   }) {
     return _then(_$DnhRealtimeStateCommentUpdated(
       commentData: null == commentData
-          ? _value.commentData
+          ? _value._commentData
           : commentData // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Map<String, dynamic>,
       socketId: freezed == socketId
           ? _value.socketId
           : socketId // ignore: cast_nullable_to_non_nullable
@@ -1115,10 +1166,17 @@ class __$$DnhRealtimeStateCommentUpdatedCopyWithImpl<$Res>
 class _$DnhRealtimeStateCommentUpdated
     implements DnhRealtimeStateCommentUpdated {
   const _$DnhRealtimeStateCommentUpdated(
-      {required this.commentData, this.socketId});
+      {required final Map<String, dynamic> commentData, this.socketId})
+      : _commentData = commentData;
 
+  final Map<String, dynamic> _commentData;
   @override
-  final String commentData;
+  Map<String, dynamic> get commentData {
+    if (_commentData is EqualUnmodifiableMapView) return _commentData;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_commentData);
+  }
+
   @override
   final String? socketId;
 
@@ -1139,9 +1197,11 @@ class _$DnhRealtimeStateCommentUpdated
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -1150,13 +1210,14 @@ class _$DnhRealtimeStateCommentUpdated
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -1180,18 +1241,22 @@ class _$DnhRealtimeStateCommentUpdated
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -1212,18 +1277,22 @@ class _$DnhRealtimeStateCommentUpdated
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -1356,10 +1425,10 @@ class _$DnhRealtimeStateCommentUpdated
 
 abstract class DnhRealtimeStateCommentUpdated implements DnhRealtimeState {
   const factory DnhRealtimeStateCommentUpdated(
-      {required final String commentData,
+      {required final Map<String, dynamic> commentData,
       final String? socketId}) = _$DnhRealtimeStateCommentUpdated;
 
-  String get commentData;
+  Map<String, dynamic> get commentData;
   String? get socketId;
   @JsonKey(ignore: true)
   _$$DnhRealtimeStateCommentUpdatedCopyWith<_$DnhRealtimeStateCommentUpdated>
@@ -1441,9 +1510,11 @@ class _$DnhRealtimeStateCommentDeleted
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -1452,13 +1523,14 @@ class _$DnhRealtimeStateCommentDeleted
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -1482,18 +1554,22 @@ class _$DnhRealtimeStateCommentDeleted
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -1514,18 +1590,22 @@ class _$DnhRealtimeStateCommentDeleted
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -1734,9 +1814,11 @@ class _$DnhRealtimeStatePostAdded implements DnhRealtimeStatePostAdded {
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -1745,13 +1827,14 @@ class _$DnhRealtimeStatePostAdded implements DnhRealtimeStatePostAdded {
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -1775,18 +1858,22 @@ class _$DnhRealtimeStatePostAdded implements DnhRealtimeStatePostAdded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -1807,18 +1894,22 @@ class _$DnhRealtimeStatePostAdded implements DnhRealtimeStatePostAdded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -2026,9 +2117,11 @@ class _$DnhRealtimeStatePostUpdated implements DnhRealtimeStatePostUpdated {
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -2037,13 +2130,14 @@ class _$DnhRealtimeStatePostUpdated implements DnhRealtimeStatePostUpdated {
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -2067,18 +2161,22 @@ class _$DnhRealtimeStatePostUpdated implements DnhRealtimeStatePostUpdated {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -2099,18 +2197,22 @@ class _$DnhRealtimeStatePostUpdated implements DnhRealtimeStatePostUpdated {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -2325,9 +2427,11 @@ class _$RealtiemStatePostDeleted implements RealtiemStatePostDeleted {
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -2336,13 +2440,14 @@ class _$RealtiemStatePostDeleted implements RealtiemStatePostDeleted {
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -2366,18 +2471,22 @@ class _$RealtiemStatePostDeleted implements RealtiemStatePostDeleted {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -2398,18 +2507,22 @@ class _$RealtiemStatePostDeleted implements RealtiemStatePostDeleted {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -2561,7 +2674,7 @@ abstract class _$$DnhRealtimeStateLiveClosedCopyWith<$Res> {
           $Res Function(_$DnhRealtimeStateLiveClosed) then) =
       __$$DnhRealtimeStateLiveClosedCopyWithImpl<$Res>;
   @useResult
-  $Res call({String postData, String? socketId});
+  $Res call({Map<String, dynamic> postData, String? socketId});
 }
 
 /// @nodoc
@@ -2581,9 +2694,9 @@ class __$$DnhRealtimeStateLiveClosedCopyWithImpl<$Res>
   }) {
     return _then(_$DnhRealtimeStateLiveClosed(
       postData: null == postData
-          ? _value.postData
+          ? _value._postData
           : postData // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Map<String, dynamic>,
       socketId: freezed == socketId
           ? _value.socketId
           : socketId // ignore: cast_nullable_to_non_nullable
@@ -2595,10 +2708,18 @@ class __$$DnhRealtimeStateLiveClosedCopyWithImpl<$Res>
 /// @nodoc
 
 class _$DnhRealtimeStateLiveClosed implements DnhRealtimeStateLiveClosed {
-  const _$DnhRealtimeStateLiveClosed({required this.postData, this.socketId});
+  const _$DnhRealtimeStateLiveClosed(
+      {required final Map<String, dynamic> postData, this.socketId})
+      : _postData = postData;
 
+  final Map<String, dynamic> _postData;
   @override
-  final String postData;
+  Map<String, dynamic> get postData {
+    if (_postData is EqualUnmodifiableMapView) return _postData;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_postData);
+  }
+
   @override
   final String? socketId;
 
@@ -2619,9 +2740,11 @@ class _$DnhRealtimeStateLiveClosed implements DnhRealtimeStateLiveClosed {
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -2630,13 +2753,14 @@ class _$DnhRealtimeStateLiveClosed implements DnhRealtimeStateLiveClosed {
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -2660,18 +2784,22 @@ class _$DnhRealtimeStateLiveClosed implements DnhRealtimeStateLiveClosed {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -2692,18 +2820,22 @@ class _$DnhRealtimeStateLiveClosed implements DnhRealtimeStateLiveClosed {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -2836,10 +2968,10 @@ class _$DnhRealtimeStateLiveClosed implements DnhRealtimeStateLiveClosed {
 
 abstract class DnhRealtimeStateLiveClosed implements DnhRealtimeState {
   const factory DnhRealtimeStateLiveClosed(
-      {required final String postData,
+      {required final Map<String, dynamic> postData,
       final String? socketId}) = _$DnhRealtimeStateLiveClosed;
 
-  String get postData;
+  Map<String, dynamic> get postData;
   String? get socketId;
   @JsonKey(ignore: true)
   _$$DnhRealtimeStateLiveClosedCopyWith<_$DnhRealtimeStateLiveClosed>
@@ -2918,9 +3050,11 @@ class _$DnhRealtimeStatePostPined implements DnhRealtimeStatePostPined {
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -2929,13 +3063,14 @@ class _$DnhRealtimeStatePostPined implements DnhRealtimeStatePostPined {
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -2959,18 +3094,22 @@ class _$DnhRealtimeStatePostPined implements DnhRealtimeStatePostPined {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -2991,18 +3130,22 @@ class _$DnhRealtimeStatePostPined implements DnhRealtimeStatePostPined {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -3219,9 +3362,11 @@ class _$DnhRealtimeStatePostUnPin implements DnhRealtimeStatePostUnPin {
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -3230,13 +3375,14 @@ class _$DnhRealtimeStatePostUnPin implements DnhRealtimeStatePostUnPin {
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -3260,18 +3406,22 @@ class _$DnhRealtimeStatePostUnPin implements DnhRealtimeStatePostUnPin {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -3292,18 +3442,22 @@ class _$DnhRealtimeStatePostUnPin implements DnhRealtimeStatePostUnPin {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -3508,9 +3662,11 @@ class _$DnhRealtimeStateSocketConnected
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -3519,13 +3675,14 @@ class _$DnhRealtimeStateSocketConnected
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -3549,18 +3706,22 @@ class _$DnhRealtimeStateSocketConnected
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -3581,18 +3742,22 @@ class _$DnhRealtimeStateSocketConnected
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -3740,7 +3905,7 @@ abstract class _$$DnhRealtimeStateLiveRecordStoppedCopyWith<$Res> {
           $Res Function(_$DnhRealtimeStateLiveRecordStopped) then) =
       __$$DnhRealtimeStateLiveRecordStoppedCopyWithImpl<$Res>;
   @useResult
-  $Res call({String postData, String? socketId});
+  $Res call({Map<String, dynamic> postData, String? socketId});
 }
 
 /// @nodoc
@@ -3761,9 +3926,9 @@ class __$$DnhRealtimeStateLiveRecordStoppedCopyWithImpl<$Res>
   }) {
     return _then(_$DnhRealtimeStateLiveRecordStopped(
       postData: null == postData
-          ? _value.postData
+          ? _value._postData
           : postData // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Map<String, dynamic>,
       socketId: freezed == socketId
           ? _value.socketId
           : socketId // ignore: cast_nullable_to_non_nullable
@@ -3777,10 +3942,17 @@ class __$$DnhRealtimeStateLiveRecordStoppedCopyWithImpl<$Res>
 class _$DnhRealtimeStateLiveRecordStopped
     implements DnhRealtimeStateLiveRecordStopped {
   const _$DnhRealtimeStateLiveRecordStopped(
-      {required this.postData, this.socketId});
+      {required final Map<String, dynamic> postData, this.socketId})
+      : _postData = postData;
 
+  final Map<String, dynamic> _postData;
   @override
-  final String postData;
+  Map<String, dynamic> get postData {
+    if (_postData is EqualUnmodifiableMapView) return _postData;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_postData);
+  }
+
   @override
   final String? socketId;
 
@@ -3802,9 +3974,11 @@ class _$DnhRealtimeStateLiveRecordStopped
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -3813,13 +3987,14 @@ class _$DnhRealtimeStateLiveRecordStopped
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -3843,18 +4018,22 @@ class _$DnhRealtimeStateLiveRecordStopped
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -3875,18 +4054,22 @@ class _$DnhRealtimeStateLiveRecordStopped
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -4019,10 +4202,10 @@ class _$DnhRealtimeStateLiveRecordStopped
 
 abstract class DnhRealtimeStateLiveRecordStopped implements DnhRealtimeState {
   const factory DnhRealtimeStateLiveRecordStopped(
-      {required final String postData,
+      {required final Map<String, dynamic> postData,
       final String? socketId}) = _$DnhRealtimeStateLiveRecordStopped;
 
-  String get postData;
+  Map<String, dynamic> get postData;
   String? get socketId;
   @JsonKey(ignore: true)
   _$$DnhRealtimeStateLiveRecordStoppedCopyWith<
@@ -4091,9 +4274,11 @@ class _$DnhRealtimeStateSocketConnectFailed
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -4102,13 +4287,14 @@ class _$DnhRealtimeStateSocketConnectFailed
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -4132,18 +4318,22 @@ class _$DnhRealtimeStateSocketConnectFailed
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -4164,18 +4354,22 @@ class _$DnhRealtimeStateSocketConnectFailed
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -4378,9 +4572,11 @@ class _$DnhRealtimeStateSocketNetworkFailed
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -4389,13 +4585,14 @@ class _$DnhRealtimeStateSocketNetworkFailed
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -4419,18 +4616,22 @@ class _$DnhRealtimeStateSocketNetworkFailed
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -4451,18 +4652,22 @@ class _$DnhRealtimeStateSocketNetworkFailed
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -4673,9 +4878,11 @@ class _$DnhRealtimeStateLiveViewCountReceived
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -4684,13 +4891,14 @@ class _$DnhRealtimeStateLiveViewCountReceived
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -4714,18 +4922,22 @@ class _$DnhRealtimeStateLiveViewCountReceived
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -4746,18 +4958,22 @@ class _$DnhRealtimeStateLiveViewCountReceived
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -4977,9 +5193,11 @@ class _$DnhRealtimeStateShopStatusGet implements DnhRealtimeStateShopStatusGet {
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -4988,13 +5206,14 @@ class _$DnhRealtimeStateShopStatusGet implements DnhRealtimeStateShopStatusGet {
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -5018,18 +5237,22 @@ class _$DnhRealtimeStateShopStatusGet implements DnhRealtimeStateShopStatusGet {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -5050,18 +5273,22 @@ class _$DnhRealtimeStateShopStatusGet implements DnhRealtimeStateShopStatusGet {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -5273,9 +5500,11 @@ class _$DnhRealtimeStateUserStatusReceived
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -5284,13 +5513,14 @@ class _$DnhRealtimeStateUserStatusReceived
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -5314,18 +5544,22 @@ class _$DnhRealtimeStateUserStatusReceived
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -5346,18 +5580,22 @@ class _$DnhRealtimeStateUserStatusReceived
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -5570,9 +5808,11 @@ class _$DnhRealtimeStateUserStatusChanged
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -5581,13 +5821,14 @@ class _$DnhRealtimeStateUserStatusChanged
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -5611,18 +5852,22 @@ class _$DnhRealtimeStateUserStatusChanged
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -5643,18 +5888,22 @@ class _$DnhRealtimeStateUserStatusChanged
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
@@ -5884,9 +6133,11 @@ class _$DnhRealtimeStatePostTemporaryUpdated
   TResult when<TResult extends Object?>({
     required TResult Function(int postId, int viewCount) viewCountChanged,
     required TResult Function() initial,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentAdded,
-    required TResult Function(String commentData, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> commentData, String? socketId)
         commentUpdated,
     required TResult Function(
             int commentId, int? commentParentId, String? socketId)
@@ -5895,13 +6146,14 @@ class _$DnhRealtimeStatePostTemporaryUpdated
     required TResult Function(String postData, String? socketId) postUpdated,
     required TResult Function(int postId, String? socketId, String shopId)
         postDeleted,
-    required TResult Function(String postData, String? socketId) liveClosed,
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
+        liveClosed,
     required TResult Function(int postId, String shopId, String? socketId)
         postPined,
     required TResult Function(int postId, String shopId, String? socketId)
         postUnPin,
     required TResult Function(String? socketId) socketConnected,
-    required TResult Function(String postData, String? socketId)
+    required TResult Function(Map<String, dynamic> postData, String? socketId)
         liveRecordStopped,
     required TResult Function(dynamic data) socketConnectFailed,
     required TResult Function(dynamic data) socketNetworkFailed,
@@ -5925,18 +6177,22 @@ class _$DnhRealtimeStatePostTemporaryUpdated
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int postId, int viewCount)? viewCountChanged,
     TResult? Function()? initial,
-    TResult? Function(String commentData, String? socketId)? commentAdded,
-    TResult? Function(String commentData, String? socketId)? commentUpdated,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult? Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult? Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult? Function(String postData, String? socketId)? postAdded,
     TResult? Function(String postData, String? socketId)? postUpdated,
     TResult? Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult? Function(String postData, String? socketId)? liveClosed,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult? Function(int postId, String shopId, String? socketId)? postPined,
     TResult? Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult? Function(String? socketId)? socketConnected,
-    TResult? Function(String postData, String? socketId)? liveRecordStopped,
+    TResult? Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult? Function(dynamic data)? socketConnectFailed,
     TResult? Function(dynamic data)? socketNetworkFailed,
     TResult? Function(int postId, int liveTotalViewCount)?
@@ -5958,18 +6214,22 @@ class _$DnhRealtimeStatePostTemporaryUpdated
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int postId, int viewCount)? viewCountChanged,
     TResult Function()? initial,
-    TResult Function(String commentData, String? socketId)? commentAdded,
-    TResult Function(String commentData, String? socketId)? commentUpdated,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentAdded,
+    TResult Function(Map<String, dynamic> commentData, String? socketId)?
+        commentUpdated,
     TResult Function(int commentId, int? commentParentId, String? socketId)?
         commentDeleted,
     TResult Function(String postData, String? socketId)? postAdded,
     TResult Function(String postData, String? socketId)? postUpdated,
     TResult Function(int postId, String? socketId, String shopId)? postDeleted,
-    TResult Function(String postData, String? socketId)? liveClosed,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveClosed,
     TResult Function(int postId, String shopId, String? socketId)? postPined,
     TResult Function(int postId, String shopId, String? socketId)? postUnPin,
     TResult Function(String? socketId)? socketConnected,
-    TResult Function(String postData, String? socketId)? liveRecordStopped,
+    TResult Function(Map<String, dynamic> postData, String? socketId)?
+        liveRecordStopped,
     TResult Function(dynamic data)? socketConnectFailed,
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
