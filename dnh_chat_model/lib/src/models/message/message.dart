@@ -1,7 +1,7 @@
 import '../../../dnh_chat_model.dart';
 
 mixin Message {
-  String? get id;
+  String get id;
 
   bool get isOwn;
 
@@ -9,7 +9,7 @@ mixin Message {
 
   DateTime? get createdAt;
 
-  String? get text;
+  String get text;
 
   Status get status;
 

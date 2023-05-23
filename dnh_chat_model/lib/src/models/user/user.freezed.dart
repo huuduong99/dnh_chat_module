@@ -20,7 +20,7 @@ User _$UserFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$User {
-  String? get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String? get firstName => throw _privateConstructorUsedError;
   String? get lastName => throw _privateConstructorUsedError;
   DateTime? get lastSeen => throw _privateConstructorUsedError;
@@ -39,7 +39,7 @@ abstract class $UserCopyWith<$Res> {
       _$UserCopyWithImpl<$Res, User>;
   @useResult
   $Res call(
-      {String? id,
+      {String id,
       String? firstName,
       String? lastName,
       DateTime? lastSeen,
@@ -61,7 +61,7 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? firstName = freezed,
     Object? lastName = freezed,
     Object? lastSeen = freezed,
@@ -70,10 +70,10 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
     Object? updatedAt = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       firstName: freezed == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
@@ -109,7 +109,7 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String? id,
+      {String id,
       String? firstName,
       String? lastName,
       DateTime? lastSeen,
@@ -127,7 +127,7 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? firstName = freezed,
     Object? lastName = freezed,
     Object? lastSeen = freezed,
@@ -136,10 +136,10 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
     Object? updatedAt = freezed,
   }) {
     return _then(_$_User(
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       firstName: freezed == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
@@ -184,7 +184,7 @@ class _$_User implements _User {
 
   @override
   @JsonKey()
-  final String? id;
+  final String id;
   @override
   final String? firstName;
   @override
@@ -244,7 +244,7 @@ class _$_User implements _User {
 
 abstract class _User implements User {
   const factory _User(
-      {final String? id,
+      {final String id,
       final String? firstName,
       final String? lastName,
       final DateTime? lastSeen,
@@ -255,7 +255,7 @@ abstract class _User implements User {
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
   @override
-  String? get id;
+  String get id;
   @override
   String? get firstName;
   @override

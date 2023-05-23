@@ -7,11 +7,11 @@ part 'attachment_info.g.dart';
 @freezed
 class AttachmentInfo with _$AttachmentInfo {
   const factory AttachmentInfo({
-    String? id,
-    String? fileUrl,
+    required String id,
+    required String fileUrl,
     String? downloadUrl,
-    String? name,
-    int? size,
+    required String name,
+    @Default(0) int size,
     @Default([]) List<int> byteData,
   }) = _AttachmentInfo;
 

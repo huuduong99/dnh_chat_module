@@ -22,7 +22,7 @@ ImageMessage _$ImageMessageFromJson(Map<String, dynamic> json) {
 mixin _$ImageMessage {
   User get author => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
-  String? get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   bool get isDeleted => throw _privateConstructorUsedError;
   bool get isEdited => throw _privateConstructorUsedError;
   bool get isOwn => throw _privateConstructorUsedError;
@@ -31,12 +31,14 @@ mixin _$ImageMessage {
   QuotedMessageInfo? get quotedMessageInfo =>
       throw _privateConstructorUsedError;
   Status get status => throw _privateConstructorUsedError;
-  String? get text => throw _privateConstructorUsedError;
+  String get text => throw _privateConstructorUsedError;
   MessageType get type => throw _privateConstructorUsedError;
   DateTime? get updatedAt => throw _privateConstructorUsedError;
   String? get uri => throw _privateConstructorUsedError;
   List<AttachmentInfo> get uris => throw _privateConstructorUsedError;
   double? get height => throw _privateConstructorUsedError;
+  double? get width => throw _privateConstructorUsedError;
+  String get url => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -53,7 +55,7 @@ abstract class $ImageMessageCopyWith<$Res> {
   $Res call(
       {User author,
       DateTime? createdAt,
-      String? id,
+      String id,
       bool isDeleted,
       bool isEdited,
       bool isOwn,
@@ -61,12 +63,14 @@ abstract class $ImageMessageCopyWith<$Res> {
       bool isShowSeen,
       QuotedMessageInfo? quotedMessageInfo,
       Status status,
-      String? text,
+      String text,
       MessageType type,
       DateTime? updatedAt,
       String? uri,
       List<AttachmentInfo> uris,
-      double? height});
+      double? height,
+      double? width,
+      String url});
 
   $UserCopyWith<$Res> get author;
   $QuotedMessageInfoCopyWith<$Res>? get quotedMessageInfo;
@@ -87,7 +91,7 @@ class _$ImageMessageCopyWithImpl<$Res, $Val extends ImageMessage>
   $Res call({
     Object? author = null,
     Object? createdAt = freezed,
-    Object? id = freezed,
+    Object? id = null,
     Object? isDeleted = null,
     Object? isEdited = null,
     Object? isOwn = null,
@@ -95,12 +99,14 @@ class _$ImageMessageCopyWithImpl<$Res, $Val extends ImageMessage>
     Object? isShowSeen = null,
     Object? quotedMessageInfo = freezed,
     Object? status = null,
-    Object? text = freezed,
+    Object? text = null,
     Object? type = null,
     Object? updatedAt = freezed,
     Object? uri = freezed,
     Object? uris = null,
     Object? height = freezed,
+    Object? width = freezed,
+    Object? url = null,
   }) {
     return _then(_value.copyWith(
       author: null == author
@@ -111,10 +117,10 @@ class _$ImageMessageCopyWithImpl<$Res, $Val extends ImageMessage>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
@@ -143,10 +149,10 @@ class _$ImageMessageCopyWithImpl<$Res, $Val extends ImageMessage>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Status,
-      text: freezed == text
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -167,6 +173,14 @@ class _$ImageMessageCopyWithImpl<$Res, $Val extends ImageMessage>
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as double?,
+      width: freezed == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double?,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 
@@ -202,7 +216,7 @@ abstract class _$$_ImageMessageCopyWith<$Res>
   $Res call(
       {User author,
       DateTime? createdAt,
-      String? id,
+      String id,
       bool isDeleted,
       bool isEdited,
       bool isOwn,
@@ -210,12 +224,14 @@ abstract class _$$_ImageMessageCopyWith<$Res>
       bool isShowSeen,
       QuotedMessageInfo? quotedMessageInfo,
       Status status,
-      String? text,
+      String text,
       MessageType type,
       DateTime? updatedAt,
       String? uri,
       List<AttachmentInfo> uris,
-      double? height});
+      double? height,
+      double? width,
+      String url});
 
   @override
   $UserCopyWith<$Res> get author;
@@ -236,7 +252,7 @@ class __$$_ImageMessageCopyWithImpl<$Res>
   $Res call({
     Object? author = null,
     Object? createdAt = freezed,
-    Object? id = freezed,
+    Object? id = null,
     Object? isDeleted = null,
     Object? isEdited = null,
     Object? isOwn = null,
@@ -244,12 +260,14 @@ class __$$_ImageMessageCopyWithImpl<$Res>
     Object? isShowSeen = null,
     Object? quotedMessageInfo = freezed,
     Object? status = null,
-    Object? text = freezed,
+    Object? text = null,
     Object? type = null,
     Object? updatedAt = freezed,
     Object? uri = freezed,
     Object? uris = null,
     Object? height = freezed,
+    Object? width = freezed,
+    Object? url = null,
   }) {
     return _then(_$_ImageMessage(
       author: null == author
@@ -260,10 +278,10 @@ class __$$_ImageMessageCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
@@ -292,10 +310,10 @@ class __$$_ImageMessageCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Status,
-      text: freezed == text
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -316,6 +334,14 @@ class __$$_ImageMessageCopyWithImpl<$Res>
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as double?,
+      width: freezed == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double?,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -326,7 +352,7 @@ class _$_ImageMessage implements _ImageMessage {
   const _$_ImageMessage(
       {this.author = const User(),
       this.createdAt,
-      this.id,
+      this.id = '',
       this.isDeleted = false,
       this.isEdited = false,
       this.isOwn = false,
@@ -334,12 +360,14 @@ class _$_ImageMessage implements _ImageMessage {
       this.isShowSeen = false,
       this.quotedMessageInfo,
       this.status = Status.delivered,
-      this.text,
+      this.text = '',
       this.type = MessageType.custom,
       this.updatedAt,
       this.uri,
       final List<AttachmentInfo> uris = const [],
-      this.height})
+      this.height,
+      this.width,
+      this.url = ''})
       : _uris = uris;
 
   factory _$_ImageMessage.fromJson(Map<String, dynamic> json) =>
@@ -351,7 +379,8 @@ class _$_ImageMessage implements _ImageMessage {
   @override
   final DateTime? createdAt;
   @override
-  final String? id;
+  @JsonKey()
+  final String id;
   @override
   @JsonKey()
   final bool isDeleted;
@@ -373,7 +402,8 @@ class _$_ImageMessage implements _ImageMessage {
   @JsonKey()
   final Status status;
   @override
-  final String? text;
+  @JsonKey()
+  final String text;
   @override
   @JsonKey()
   final MessageType type;
@@ -392,10 +422,15 @@ class _$_ImageMessage implements _ImageMessage {
 
   @override
   final double? height;
+  @override
+  final double? width;
+  @override
+  @JsonKey()
+  final String url;
 
   @override
   String toString() {
-    return 'ImageMessage(author: $author, createdAt: $createdAt, id: $id, isDeleted: $isDeleted, isEdited: $isEdited, isOwn: $isOwn, isSeen: $isSeen, isShowSeen: $isShowSeen, quotedMessageInfo: $quotedMessageInfo, status: $status, text: $text, type: $type, updatedAt: $updatedAt, uri: $uri, uris: $uris, height: $height)';
+    return 'ImageMessage(author: $author, createdAt: $createdAt, id: $id, isDeleted: $isDeleted, isEdited: $isEdited, isOwn: $isOwn, isSeen: $isSeen, isShowSeen: $isShowSeen, quotedMessageInfo: $quotedMessageInfo, status: $status, text: $text, type: $type, updatedAt: $updatedAt, uri: $uri, uris: $uris, height: $height, width: $width, url: $url)';
   }
 
   @override
@@ -424,7 +459,9 @@ class _$_ImageMessage implements _ImageMessage {
                 other.updatedAt == updatedAt) &&
             (identical(other.uri, uri) || other.uri == uri) &&
             const DeepCollectionEquality().equals(other._uris, _uris) &&
-            (identical(other.height, height) || other.height == height));
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.width, width) || other.width == width) &&
+            (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(ignore: true)
@@ -446,7 +483,9 @@ class _$_ImageMessage implements _ImageMessage {
       updatedAt,
       uri,
       const DeepCollectionEquality().hash(_uris),
-      height);
+      height,
+      width,
+      url);
 
   @JsonKey(ignore: true)
   @override
@@ -466,7 +505,7 @@ abstract class _ImageMessage implements ImageMessage {
   const factory _ImageMessage(
       {final User author,
       final DateTime? createdAt,
-      final String? id,
+      final String id,
       final bool isDeleted,
       final bool isEdited,
       final bool isOwn,
@@ -474,12 +513,14 @@ abstract class _ImageMessage implements ImageMessage {
       final bool isShowSeen,
       final QuotedMessageInfo? quotedMessageInfo,
       final Status status,
-      final String? text,
+      final String text,
       final MessageType type,
       final DateTime? updatedAt,
       final String? uri,
       final List<AttachmentInfo> uris,
-      final double? height}) = _$_ImageMessage;
+      final double? height,
+      final double? width,
+      final String url}) = _$_ImageMessage;
 
   factory _ImageMessage.fromJson(Map<String, dynamic> json) =
       _$_ImageMessage.fromJson;
@@ -489,7 +530,7 @@ abstract class _ImageMessage implements ImageMessage {
   @override
   DateTime? get createdAt;
   @override
-  String? get id;
+  String get id;
   @override
   bool get isDeleted;
   @override
@@ -505,7 +546,7 @@ abstract class _ImageMessage implements ImageMessage {
   @override
   Status get status;
   @override
-  String? get text;
+  String get text;
   @override
   MessageType get type;
   @override
@@ -516,6 +557,10 @@ abstract class _ImageMessage implements ImageMessage {
   List<AttachmentInfo> get uris;
   @override
   double? get height;
+  @override
+  double? get width;
+  @override
+  String get url;
   @override
   @JsonKey(ignore: true)
   _$$_ImageMessageCopyWith<_$_ImageMessage> get copyWith =>

@@ -11,7 +11,7 @@ class ImageMessage with Message, _$ImageMessage {
   const factory ImageMessage({
     @Default(User()) User author,
     DateTime? createdAt,
-    String? id,
+    @Default('') String id,
     @Default(false) bool isDeleted,
     @Default(false) bool isEdited,
     @Default(false) bool isOwn,
@@ -19,12 +19,14 @@ class ImageMessage with Message, _$ImageMessage {
     @Default(false) bool isShowSeen,
     QuotedMessageInfo? quotedMessageInfo,
     @Default(Status.delivered) Status status,
-    String? text,
+    @Default('') String text,
     @Default(MessageType.custom) MessageType type,
     DateTime? updatedAt,
     String? uri,
     @Default([]) List<AttachmentInfo> uris,
     double? height,
+    double? width,
+    @Default('') String url,
   }) = _ImageMessage;
 
   factory ImageMessage.fromJson(Map<String, dynamic> json) =>

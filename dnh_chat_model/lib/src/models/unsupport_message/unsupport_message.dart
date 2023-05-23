@@ -11,7 +11,7 @@ class UnSupportMessage with Message, _$UnSupportMessage {
   const factory UnSupportMessage({
     @Default(User()) User author,
     DateTime? createdAt,
-    String? id,
+    @Default('') String id,
     @Default(false) bool isDeleted,
     @Default(false) bool isEdited,
     @Default(false) bool isOwn,
@@ -19,7 +19,7 @@ class UnSupportMessage with Message, _$UnSupportMessage {
     @Default(false) bool isShowSeen,
     QuotedMessageInfo? quotedMessageInfo,
     @Default(Status.delivered) Status status,
-    String? text,
+    @Default('') String text,
     @Default(MessageType.custom) MessageType type,
     DateTime? updatedAt,
   }) = _UnSupportMessage;

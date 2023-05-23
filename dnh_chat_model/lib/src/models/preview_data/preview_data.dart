@@ -7,6 +7,26 @@ part 'preview_data.freezed.dart';
 @freezed
 class PreviewData with _$PreviewData {
   const factory PreviewData({
+    /// Link description (usually og:description meta tag).
+    String? description,
+
+    /// See [PreviewDataImage].
+    PreviewDataImage? image,
+
+    /// Remote resource URL.
+    String? link,
+
+    /// Link title (usually og:title meta tag).
+    String? title,
+  }) = _PreviewData;
+
+  factory PreviewData.fromJson(Map<String, dynamic> json) =>
+      _$PreviewDataFromJson(json);
+}
+
+@freezed
+class PreviewDataImage with _$PreviewDataImage {
+  const factory PreviewDataImage({
     /// Image height in pixels.
     @Default(0) double height,
 
@@ -15,8 +35,8 @@ class PreviewData with _$PreviewData {
 
     /// Image width in pixels.
     @Default(0) double width,
-  }) = _PreviewData;
+  }) = _PreviewDataImage;
 
-  factory PreviewData.fromJson(Map<String, dynamic> json) =>
-      _$PreviewDataFromJson(json);
+  factory PreviewDataImage.fromJson(Map<String, dynamic> json) =>
+      _$PreviewDataImageFromJson(json);
 }

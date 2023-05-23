@@ -22,7 +22,7 @@ FileMessage _$FileMessageFromJson(Map<String, dynamic> json) {
 mixin _$FileMessage {
   User get author => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
-  String? get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   bool get isDeleted => throw _privateConstructorUsedError;
   bool get isEdited => throw _privateConstructorUsedError;
   bool get isOwn => throw _privateConstructorUsedError;
@@ -31,12 +31,13 @@ mixin _$FileMessage {
   QuotedMessageInfo? get quotedMessageInfo =>
       throw _privateConstructorUsedError;
   Status get status => throw _privateConstructorUsedError;
-  String? get text => throw _privateConstructorUsedError;
+  String get text => throw _privateConstructorUsedError;
   MessageType get type => throw _privateConstructorUsedError;
   DateTime? get updatedAt => throw _privateConstructorUsedError;
   String? get uri => throw _privateConstructorUsedError;
   double? get height => throw _privateConstructorUsedError;
   num get size => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -53,7 +54,7 @@ abstract class $FileMessageCopyWith<$Res> {
   $Res call(
       {User author,
       DateTime? createdAt,
-      String? id,
+      String id,
       bool isDeleted,
       bool isEdited,
       bool isOwn,
@@ -61,12 +62,13 @@ abstract class $FileMessageCopyWith<$Res> {
       bool isShowSeen,
       QuotedMessageInfo? quotedMessageInfo,
       Status status,
-      String? text,
+      String text,
       MessageType type,
       DateTime? updatedAt,
       String? uri,
       double? height,
-      num size});
+      num size,
+      String name});
 
   $UserCopyWith<$Res> get author;
   $QuotedMessageInfoCopyWith<$Res>? get quotedMessageInfo;
@@ -87,7 +89,7 @@ class _$FileMessageCopyWithImpl<$Res, $Val extends FileMessage>
   $Res call({
     Object? author = null,
     Object? createdAt = freezed,
-    Object? id = freezed,
+    Object? id = null,
     Object? isDeleted = null,
     Object? isEdited = null,
     Object? isOwn = null,
@@ -95,12 +97,13 @@ class _$FileMessageCopyWithImpl<$Res, $Val extends FileMessage>
     Object? isShowSeen = null,
     Object? quotedMessageInfo = freezed,
     Object? status = null,
-    Object? text = freezed,
+    Object? text = null,
     Object? type = null,
     Object? updatedAt = freezed,
     Object? uri = freezed,
     Object? height = freezed,
     Object? size = null,
+    Object? name = null,
   }) {
     return _then(_value.copyWith(
       author: null == author
@@ -111,10 +114,10 @@ class _$FileMessageCopyWithImpl<$Res, $Val extends FileMessage>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
@@ -143,10 +146,10 @@ class _$FileMessageCopyWithImpl<$Res, $Val extends FileMessage>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Status,
-      text: freezed == text
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -167,6 +170,10 @@ class _$FileMessageCopyWithImpl<$Res, $Val extends FileMessage>
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
               as num,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 
@@ -202,7 +209,7 @@ abstract class _$$_FileMessageCopyWith<$Res>
   $Res call(
       {User author,
       DateTime? createdAt,
-      String? id,
+      String id,
       bool isDeleted,
       bool isEdited,
       bool isOwn,
@@ -210,12 +217,13 @@ abstract class _$$_FileMessageCopyWith<$Res>
       bool isShowSeen,
       QuotedMessageInfo? quotedMessageInfo,
       Status status,
-      String? text,
+      String text,
       MessageType type,
       DateTime? updatedAt,
       String? uri,
       double? height,
-      num size});
+      num size,
+      String name});
 
   @override
   $UserCopyWith<$Res> get author;
@@ -236,7 +244,7 @@ class __$$_FileMessageCopyWithImpl<$Res>
   $Res call({
     Object? author = null,
     Object? createdAt = freezed,
-    Object? id = freezed,
+    Object? id = null,
     Object? isDeleted = null,
     Object? isEdited = null,
     Object? isOwn = null,
@@ -244,12 +252,13 @@ class __$$_FileMessageCopyWithImpl<$Res>
     Object? isShowSeen = null,
     Object? quotedMessageInfo = freezed,
     Object? status = null,
-    Object? text = freezed,
+    Object? text = null,
     Object? type = null,
     Object? updatedAt = freezed,
     Object? uri = freezed,
     Object? height = freezed,
     Object? size = null,
+    Object? name = null,
   }) {
     return _then(_$_FileMessage(
       author: null == author
@@ -260,10 +269,10 @@ class __$$_FileMessageCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
@@ -292,10 +301,10 @@ class __$$_FileMessageCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Status,
-      text: freezed == text
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -316,6 +325,10 @@ class __$$_FileMessageCopyWithImpl<$Res>
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
               as num,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -326,7 +339,7 @@ class _$_FileMessage implements _FileMessage {
   const _$_FileMessage(
       {this.author = const User(),
       this.createdAt,
-      this.id,
+      this.id = '',
       this.isDeleted = false,
       this.isEdited = false,
       this.isOwn = false,
@@ -334,12 +347,13 @@ class _$_FileMessage implements _FileMessage {
       this.isShowSeen = false,
       this.quotedMessageInfo,
       this.status = Status.delivered,
-      this.text,
+      this.text = '',
       this.type = MessageType.custom,
       this.updatedAt,
       this.uri,
       this.height,
-      this.size = 0});
+      this.size = 0,
+      this.name = ''});
 
   factory _$_FileMessage.fromJson(Map<String, dynamic> json) =>
       _$$_FileMessageFromJson(json);
@@ -350,7 +364,8 @@ class _$_FileMessage implements _FileMessage {
   @override
   final DateTime? createdAt;
   @override
-  final String? id;
+  @JsonKey()
+  final String id;
   @override
   @JsonKey()
   final bool isDeleted;
@@ -372,7 +387,8 @@ class _$_FileMessage implements _FileMessage {
   @JsonKey()
   final Status status;
   @override
-  final String? text;
+  @JsonKey()
+  final String text;
   @override
   @JsonKey()
   final MessageType type;
@@ -385,10 +401,13 @@ class _$_FileMessage implements _FileMessage {
   @override
   @JsonKey()
   final num size;
+  @override
+  @JsonKey()
+  final String name;
 
   @override
   String toString() {
-    return 'FileMessage(author: $author, createdAt: $createdAt, id: $id, isDeleted: $isDeleted, isEdited: $isEdited, isOwn: $isOwn, isSeen: $isSeen, isShowSeen: $isShowSeen, quotedMessageInfo: $quotedMessageInfo, status: $status, text: $text, type: $type, updatedAt: $updatedAt, uri: $uri, height: $height, size: $size)';
+    return 'FileMessage(author: $author, createdAt: $createdAt, id: $id, isDeleted: $isDeleted, isEdited: $isEdited, isOwn: $isOwn, isSeen: $isSeen, isShowSeen: $isShowSeen, quotedMessageInfo: $quotedMessageInfo, status: $status, text: $text, type: $type, updatedAt: $updatedAt, uri: $uri, height: $height, size: $size, name: $name)';
   }
 
   @override
@@ -417,7 +436,8 @@ class _$_FileMessage implements _FileMessage {
                 other.updatedAt == updatedAt) &&
             (identical(other.uri, uri) || other.uri == uri) &&
             (identical(other.height, height) || other.height == height) &&
-            (identical(other.size, size) || other.size == size));
+            (identical(other.size, size) || other.size == size) &&
+            (identical(other.name, name) || other.name == name));
   }
 
   @JsonKey(ignore: true)
@@ -439,7 +459,8 @@ class _$_FileMessage implements _FileMessage {
       updatedAt,
       uri,
       height,
-      size);
+      size,
+      name);
 
   @JsonKey(ignore: true)
   @override
@@ -459,7 +480,7 @@ abstract class _FileMessage implements FileMessage {
   const factory _FileMessage(
       {final User author,
       final DateTime? createdAt,
-      final String? id,
+      final String id,
       final bool isDeleted,
       final bool isEdited,
       final bool isOwn,
@@ -467,12 +488,13 @@ abstract class _FileMessage implements FileMessage {
       final bool isShowSeen,
       final QuotedMessageInfo? quotedMessageInfo,
       final Status status,
-      final String? text,
+      final String text,
       final MessageType type,
       final DateTime? updatedAt,
       final String? uri,
       final double? height,
-      final num size}) = _$_FileMessage;
+      final num size,
+      final String name}) = _$_FileMessage;
 
   factory _FileMessage.fromJson(Map<String, dynamic> json) =
       _$_FileMessage.fromJson;
@@ -482,7 +504,7 @@ abstract class _FileMessage implements FileMessage {
   @override
   DateTime? get createdAt;
   @override
-  String? get id;
+  String get id;
   @override
   bool get isDeleted;
   @override
@@ -498,7 +520,7 @@ abstract class _FileMessage implements FileMessage {
   @override
   Status get status;
   @override
-  String? get text;
+  String get text;
   @override
   MessageType get type;
   @override
@@ -509,6 +531,8 @@ abstract class _FileMessage implements FileMessage {
   double? get height;
   @override
   num get size;
+  @override
+  String get name;
   @override
   @JsonKey(ignore: true)
   _$$_FileMessageCopyWith<_$_FileMessage> get copyWith =>

@@ -11,7 +11,7 @@ class FileMessage with Message, _$FileMessage {
   const factory FileMessage({
     @Default(User()) User author,
     DateTime? createdAt,
-    String? id,
+    @Default('') String id,
     @Default(false) bool isDeleted,
     @Default(false) bool isEdited,
     @Default(false) bool isOwn,
@@ -19,12 +19,13 @@ class FileMessage with Message, _$FileMessage {
     @Default(false) bool isShowSeen,
     QuotedMessageInfo? quotedMessageInfo,
     @Default(Status.delivered) Status status,
-    String? text,
+    @Default('') String text,
     @Default(MessageType.custom) MessageType type,
     DateTime? updatedAt,
     String? uri,
     double? height,
     @Default(0) num size,
+    @Default('') String name,
   }) = _FileMessage;
 
   factory FileMessage.fromJson(Map<String, dynamic> json) =>

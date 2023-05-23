@@ -20,11 +20,11 @@ AttachmentInfo _$AttachmentInfoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AttachmentInfo {
-  String? get id => throw _privateConstructorUsedError;
-  String? get fileUrl => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
+  String get fileUrl => throw _privateConstructorUsedError;
   String? get downloadUrl => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  int? get size => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  int get size => throw _privateConstructorUsedError;
   List<int> get byteData => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -40,11 +40,11 @@ abstract class $AttachmentInfoCopyWith<$Res> {
       _$AttachmentInfoCopyWithImpl<$Res, AttachmentInfo>;
   @useResult
   $Res call(
-      {String? id,
-      String? fileUrl,
+      {String id,
+      String fileUrl,
       String? downloadUrl,
-      String? name,
-      int? size,
+      String name,
+      int size,
       List<int> byteData});
 }
 
@@ -61,34 +61,34 @@ class _$AttachmentInfoCopyWithImpl<$Res, $Val extends AttachmentInfo>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? fileUrl = freezed,
+    Object? id = null,
+    Object? fileUrl = null,
     Object? downloadUrl = freezed,
-    Object? name = freezed,
-    Object? size = freezed,
+    Object? name = null,
+    Object? size = null,
     Object? byteData = null,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fileUrl: freezed == fileUrl
+              as String,
+      fileUrl: null == fileUrl
           ? _value.fileUrl
           : fileUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       downloadUrl: freezed == downloadUrl
           ? _value.downloadUrl
           : downloadUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: freezed == name
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      size: freezed == size
+              as String,
+      size: null == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       byteData: null == byteData
           ? _value.byteData
           : byteData // ignore: cast_nullable_to_non_nullable
@@ -106,11 +106,11 @@ abstract class _$$_AttachmentInfoCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? id,
-      String? fileUrl,
+      {String id,
+      String fileUrl,
       String? downloadUrl,
-      String? name,
-      int? size,
+      String name,
+      int size,
       List<int> byteData});
 }
 
@@ -125,34 +125,34 @@ class __$$_AttachmentInfoCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? fileUrl = freezed,
+    Object? id = null,
+    Object? fileUrl = null,
     Object? downloadUrl = freezed,
-    Object? name = freezed,
-    Object? size = freezed,
+    Object? name = null,
+    Object? size = null,
     Object? byteData = null,
   }) {
     return _then(_$_AttachmentInfo(
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fileUrl: freezed == fileUrl
+              as String,
+      fileUrl: null == fileUrl
           ? _value.fileUrl
           : fileUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       downloadUrl: freezed == downloadUrl
           ? _value.downloadUrl
           : downloadUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: freezed == name
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      size: freezed == size
+              as String,
+      size: null == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       byteData: null == byteData
           ? _value._byteData
           : byteData // ignore: cast_nullable_to_non_nullable
@@ -165,11 +165,11 @@ class __$$_AttachmentInfoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AttachmentInfo implements _AttachmentInfo {
   const _$_AttachmentInfo(
-      {this.id,
-      this.fileUrl,
+      {required this.id,
+      required this.fileUrl,
       this.downloadUrl,
-      this.name,
-      this.size,
+      required this.name,
+      this.size = 0,
       final List<int> byteData = const []})
       : _byteData = byteData;
 
@@ -177,15 +177,16 @@ class _$_AttachmentInfo implements _AttachmentInfo {
       _$$_AttachmentInfoFromJson(json);
 
   @override
-  final String? id;
+  final String id;
   @override
-  final String? fileUrl;
+  final String fileUrl;
   @override
   final String? downloadUrl;
   @override
-  final String? name;
+  final String name;
   @override
-  final int? size;
+  @JsonKey()
+  final int size;
   final List<int> _byteData;
   @override
   @JsonKey()
@@ -235,26 +236,26 @@ class _$_AttachmentInfo implements _AttachmentInfo {
 
 abstract class _AttachmentInfo implements AttachmentInfo {
   const factory _AttachmentInfo(
-      {final String? id,
-      final String? fileUrl,
+      {required final String id,
+      required final String fileUrl,
       final String? downloadUrl,
-      final String? name,
-      final int? size,
+      required final String name,
+      final int size,
       final List<int> byteData}) = _$_AttachmentInfo;
 
   factory _AttachmentInfo.fromJson(Map<String, dynamic> json) =
       _$_AttachmentInfo.fromJson;
 
   @override
-  String? get id;
+  String get id;
   @override
-  String? get fileUrl;
+  String get fileUrl;
   @override
   String? get downloadUrl;
   @override
-  String? get name;
+  String get name;
   @override
-  int? get size;
+  int get size;
   @override
   List<int> get byteData;
   @override

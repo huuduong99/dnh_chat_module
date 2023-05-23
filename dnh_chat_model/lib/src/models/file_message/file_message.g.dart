@@ -14,7 +14,7 @@ _$_FileMessage _$$_FileMessageFromJson(Map<String, dynamic> json) =>
       createdAt: json['createdAt'] == null
           ? null
           : DateTime.parse(json['createdAt'] as String),
-      id: json['id'] as String?,
+      id: json['id'] as String? ?? '',
       isDeleted: json['isDeleted'] as bool? ?? false,
       isEdited: json['isEdited'] as bool? ?? false,
       isOwn: json['isOwn'] as bool? ?? false,
@@ -26,7 +26,7 @@ _$_FileMessage _$$_FileMessageFromJson(Map<String, dynamic> json) =>
               json['quotedMessageInfo'] as Map<String, dynamic>),
       status: $enumDecodeNullable(_$StatusEnumMap, json['status']) ??
           Status.delivered,
-      text: json['text'] as String?,
+      text: json['text'] as String? ?? '',
       type: $enumDecodeNullable(_$MessageTypeEnumMap, json['type']) ??
           MessageType.custom,
       updatedAt: json['updatedAt'] == null
@@ -35,6 +35,7 @@ _$_FileMessage _$$_FileMessageFromJson(Map<String, dynamic> json) =>
       uri: json['uri'] as String?,
       height: (json['height'] as num?)?.toDouble(),
       size: json['size'] as num? ?? 0,
+      name: json['name'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$_FileMessageToJson(_$_FileMessage instance) =>
@@ -55,6 +56,7 @@ Map<String, dynamic> _$$_FileMessageToJson(_$_FileMessage instance) =>
       'uri': instance.uri,
       'height': instance.height,
       'size': instance.size,
+      'name': instance.name,
     };
 
 const _$StatusEnumMap = {

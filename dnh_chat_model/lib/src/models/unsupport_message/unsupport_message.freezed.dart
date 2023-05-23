@@ -22,7 +22,7 @@ UnSupportMessage _$UnSupportMessageFromJson(Map<String, dynamic> json) {
 mixin _$UnSupportMessage {
   User get author => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
-  String? get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   bool get isDeleted => throw _privateConstructorUsedError;
   bool get isEdited => throw _privateConstructorUsedError;
   bool get isOwn => throw _privateConstructorUsedError;
@@ -31,7 +31,7 @@ mixin _$UnSupportMessage {
   QuotedMessageInfo? get quotedMessageInfo =>
       throw _privateConstructorUsedError;
   Status get status => throw _privateConstructorUsedError;
-  String? get text => throw _privateConstructorUsedError;
+  String get text => throw _privateConstructorUsedError;
   MessageType get type => throw _privateConstructorUsedError;
   DateTime? get updatedAt => throw _privateConstructorUsedError;
 
@@ -50,7 +50,7 @@ abstract class $UnSupportMessageCopyWith<$Res> {
   $Res call(
       {User author,
       DateTime? createdAt,
-      String? id,
+      String id,
       bool isDeleted,
       bool isEdited,
       bool isOwn,
@@ -58,7 +58,7 @@ abstract class $UnSupportMessageCopyWith<$Res> {
       bool isShowSeen,
       QuotedMessageInfo? quotedMessageInfo,
       Status status,
-      String? text,
+      String text,
       MessageType type,
       DateTime? updatedAt});
 
@@ -81,7 +81,7 @@ class _$UnSupportMessageCopyWithImpl<$Res, $Val extends UnSupportMessage>
   $Res call({
     Object? author = null,
     Object? createdAt = freezed,
-    Object? id = freezed,
+    Object? id = null,
     Object? isDeleted = null,
     Object? isEdited = null,
     Object? isOwn = null,
@@ -89,7 +89,7 @@ class _$UnSupportMessageCopyWithImpl<$Res, $Val extends UnSupportMessage>
     Object? isShowSeen = null,
     Object? quotedMessageInfo = freezed,
     Object? status = null,
-    Object? text = freezed,
+    Object? text = null,
     Object? type = null,
     Object? updatedAt = freezed,
   }) {
@@ -102,10 +102,10 @@ class _$UnSupportMessageCopyWithImpl<$Res, $Val extends UnSupportMessage>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
@@ -134,10 +134,10 @@ class _$UnSupportMessageCopyWithImpl<$Res, $Val extends UnSupportMessage>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Status,
-      text: freezed == text
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -181,7 +181,7 @@ abstract class _$$_UnSupportMessageCopyWith<$Res>
   $Res call(
       {User author,
       DateTime? createdAt,
-      String? id,
+      String id,
       bool isDeleted,
       bool isEdited,
       bool isOwn,
@@ -189,7 +189,7 @@ abstract class _$$_UnSupportMessageCopyWith<$Res>
       bool isShowSeen,
       QuotedMessageInfo? quotedMessageInfo,
       Status status,
-      String? text,
+      String text,
       MessageType type,
       DateTime? updatedAt});
 
@@ -212,7 +212,7 @@ class __$$_UnSupportMessageCopyWithImpl<$Res>
   $Res call({
     Object? author = null,
     Object? createdAt = freezed,
-    Object? id = freezed,
+    Object? id = null,
     Object? isDeleted = null,
     Object? isEdited = null,
     Object? isOwn = null,
@@ -220,7 +220,7 @@ class __$$_UnSupportMessageCopyWithImpl<$Res>
     Object? isShowSeen = null,
     Object? quotedMessageInfo = freezed,
     Object? status = null,
-    Object? text = freezed,
+    Object? text = null,
     Object? type = null,
     Object? updatedAt = freezed,
   }) {
@@ -233,10 +233,10 @@ class __$$_UnSupportMessageCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
@@ -265,10 +265,10 @@ class __$$_UnSupportMessageCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as Status,
-      text: freezed == text
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -287,7 +287,7 @@ class _$_UnSupportMessage implements _UnSupportMessage {
   const _$_UnSupportMessage(
       {this.author = const User(),
       this.createdAt,
-      this.id,
+      this.id = '',
       this.isDeleted = false,
       this.isEdited = false,
       this.isOwn = false,
@@ -295,7 +295,7 @@ class _$_UnSupportMessage implements _UnSupportMessage {
       this.isShowSeen = false,
       this.quotedMessageInfo,
       this.status = Status.delivered,
-      this.text,
+      this.text = '',
       this.type = MessageType.custom,
       this.updatedAt});
 
@@ -308,7 +308,8 @@ class _$_UnSupportMessage implements _UnSupportMessage {
   @override
   final DateTime? createdAt;
   @override
-  final String? id;
+  @JsonKey()
+  final String id;
   @override
   @JsonKey()
   final bool isDeleted;
@@ -330,7 +331,8 @@ class _$_UnSupportMessage implements _UnSupportMessage {
   @JsonKey()
   final Status status;
   @override
-  final String? text;
+  @JsonKey()
+  final String text;
   @override
   @JsonKey()
   final MessageType type;
@@ -404,7 +406,7 @@ abstract class _UnSupportMessage implements UnSupportMessage {
   const factory _UnSupportMessage(
       {final User author,
       final DateTime? createdAt,
-      final String? id,
+      final String id,
       final bool isDeleted,
       final bool isEdited,
       final bool isOwn,
@@ -412,7 +414,7 @@ abstract class _UnSupportMessage implements UnSupportMessage {
       final bool isShowSeen,
       final QuotedMessageInfo? quotedMessageInfo,
       final Status status,
-      final String? text,
+      final String text,
       final MessageType type,
       final DateTime? updatedAt}) = _$_UnSupportMessage;
 
@@ -424,7 +426,7 @@ abstract class _UnSupportMessage implements UnSupportMessage {
   @override
   DateTime? get createdAt;
   @override
-  String? get id;
+  String get id;
   @override
   bool get isDeleted;
   @override
@@ -440,7 +442,7 @@ abstract class _UnSupportMessage implements UnSupportMessage {
   @override
   Status get status;
   @override
-  String? get text;
+  String get text;
   @override
   MessageType get type;
   @override

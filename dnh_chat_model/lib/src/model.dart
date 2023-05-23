@@ -11,3 +11,4 @@ export 'models/custom_message/custom_message.dart';
 export 'models/file_message/file_message.dart';
 export 'models/preview_data/preview_data.dart';
 export 'models/unsupport_message/unsupport_message.dart';
+export 'models/partial_text/partial_text.dart';
