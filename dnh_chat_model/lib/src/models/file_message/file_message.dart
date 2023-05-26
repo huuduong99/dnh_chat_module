@@ -20,7 +20,7 @@ class FileMessage with Message, _$FileMessage {
     QuotedMessageInfo? quotedMessageInfo,
     @Default(Status.delivered) Status status,
     @Default('') String text,
-    @Default(MessageType.custom) MessageType type,
+    @Default(MessageType.file) MessageType type,
     DateTime? updatedAt,
     String? uri,
     double? height,

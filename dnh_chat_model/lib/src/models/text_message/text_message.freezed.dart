@@ -324,7 +324,7 @@ class _$_TextMessage implements _TextMessage {
       this.quotedMessageInfo,
       this.status = Status.delivered,
       this.text = '',
-      this.type = MessageType.custom,
+      this.type = MessageType.text,
       this.updatedAt,
       this.previewData});
 

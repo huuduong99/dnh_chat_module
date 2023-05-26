@@ -28,7 +28,7 @@ _$_TextMessage _$$_TextMessageFromJson(Map<String, dynamic> json) =>
           Status.delivered,
       text: json['text'] as String? ?? '',
       type: $enumDecodeNullable(_$MessageTypeEnumMap, json['type']) ??
-          MessageType.custom,
+          MessageType.text,
       updatedAt: json['updatedAt'] == null
           ? null
           : DateTime.parse(json['updatedAt'] as String),

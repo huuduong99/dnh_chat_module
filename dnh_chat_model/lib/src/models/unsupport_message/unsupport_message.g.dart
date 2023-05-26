@@ -28,7 +28,7 @@ _$_UnSupportMessage _$$_UnSupportMessageFromJson(Map<String, dynamic> json) =>
           Status.delivered,
       text: json['text'] as String? ?? '',
       type: $enumDecodeNullable(_$MessageTypeEnumMap, json['type']) ??
-          MessageType.custom,
+          MessageType.unsupported,
       updatedAt: json['updatedAt'] == null
           ? null
           : DateTime.parse(json['updatedAt'] as String),

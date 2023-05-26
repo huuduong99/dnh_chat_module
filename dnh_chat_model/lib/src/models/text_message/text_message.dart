@@ -20,7 +20,7 @@ class TextMessage with Message, _$TextMessage {
     QuotedMessageInfo? quotedMessageInfo,
     @Default(Status.delivered) Status status,
     @Default('') String text,
-    @Default(MessageType.custom) MessageType type,
+    @Default(MessageType.text) MessageType type,
     DateTime? updatedAt,
     PreviewData? previewData,
   }) = _TextMessage;

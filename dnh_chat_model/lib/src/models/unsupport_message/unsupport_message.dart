@@ -20,7 +20,7 @@ class UnSupportMessage with Message, _$UnSupportMessage {
     QuotedMessageInfo? quotedMessageInfo,
     @Default(Status.delivered) Status status,
     @Default('') String text,
-    @Default(MessageType.custom) MessageType type,
+    @Default(MessageType.unsupported) MessageType type,
     DateTime? updatedAt,
   }) = _UnSupportMessage;
 

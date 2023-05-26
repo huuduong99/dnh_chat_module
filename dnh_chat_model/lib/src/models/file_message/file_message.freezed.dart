@@ -348,7 +348,7 @@ class _$_FileMessage implements _FileMessage {
       this.quotedMessageInfo,
       this.status = Status.delivered,
       this.text = '',
-      this.type = MessageType.custom,
+      this.type = MessageType.file,
       this.updatedAt,
       this.uri,
       this.height,

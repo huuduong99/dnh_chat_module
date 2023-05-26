@@ -296,7 +296,7 @@ class _$_UnSupportMessage implements _UnSupportMessage {
       this.quotedMessageInfo,
       this.status = Status.delivered,
       this.text = '',
-      this.type = MessageType.custom,
+      this.type = MessageType.unsupported,
       this.updatedAt});
 
   factory _$_UnSupportMessage.fromJson(Map<String, dynamic> json) =>
