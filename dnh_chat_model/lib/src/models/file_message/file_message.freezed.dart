@@ -20,9 +20,10 @@ FileMessage _$FileMessageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FileMessage {
-  User get author => throw _privateConstructorUsedError;
+  Author get author => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
   String get id => throw _privateConstructorUsedError;
+  String? get roomId => throw _privateConstructorUsedError;
   bool get isDeleted => throw _privateConstructorUsedError;
   bool get isEdited => throw _privateConstructorUsedError;
   bool get isOwn => throw _privateConstructorUsedError;
@@ -30,7 +31,7 @@ mixin _$FileMessage {
   bool get isShowSeen => throw _privateConstructorUsedError;
   QuotedMessageInfo? get quotedMessageInfo =>
       throw _privateConstructorUsedError;
-  Status get status => throw _privateConstructorUsedError;
+  Status? get status => throw _privateConstructorUsedError;
   String get text => throw _privateConstructorUsedError;
   MessageType get type => throw _privateConstructorUsedError;
   DateTime? get updatedAt => throw _privateConstructorUsedError;
@@ -52,16 +53,17 @@ abstract class $FileMessageCopyWith<$Res> {
       _$FileMessageCopyWithImpl<$Res, FileMessage>;
   @useResult
   $Res call(
-      {User author,
+      {Author author,
       DateTime? createdAt,
       String id,
+      String? roomId,
       bool isDeleted,
       bool isEdited,
       bool isOwn,
       bool isSeen,
       bool isShowSeen,
       QuotedMessageInfo? quotedMessageInfo,
-      Status status,
+      Status? status,
       String text,
       MessageType type,
       DateTime? updatedAt,
@@ -70,7 +72,7 @@ abstract class $FileMessageCopyWith<$Res> {
       num size,
       String name});
 
-  $UserCopyWith<$Res> get author;
+  $AuthorCopyWith<$Res> get author;
   $QuotedMessageInfoCopyWith<$Res>? get quotedMessageInfo;
 }
 
@@ -90,13 +92,14 @@ class _$FileMessageCopyWithImpl<$Res, $Val extends FileMessage>
     Object? author = null,
     Object? createdAt = freezed,
     Object? id = null,
+    Object? roomId = freezed,
     Object? isDeleted = null,
     Object? isEdited = null,
     Object? isOwn = null,
     Object? isSeen = null,
     Object? isShowSeen = null,
     Object? quotedMessageInfo = freezed,
-    Object? status = null,
+    Object? status = freezed,
     Object? text = null,
     Object? type = null,
     Object? updatedAt = freezed,
@@ -109,7 +112,7 @@ class _$FileMessageCopyWithImpl<$Res, $Val extends FileMessage>
       author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
-              as User,
+              as Author,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -118,6 +121,10 @@ class _$FileMessageCopyWithImpl<$Res, $Val extends FileMessage>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
+      roomId: freezed == roomId
+          ? _value.roomId
+          : roomId // ignore: cast_nullable_to_non_nullable
+              as String?,
       isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
@@ -142,10 +149,10 @@ class _$FileMessageCopyWithImpl<$Res, $Val extends FileMessage>
           ? _value.quotedMessageInfo
           : quotedMessageInfo // ignore: cast_nullable_to_non_nullable
               as QuotedMessageInfo?,
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Status,
+              as Status?,
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -179,8 +186,8 @@ class _$FileMessageCopyWithImpl<$Res, $Val extends FileMessage>
 
   @override
   @pragma('vm:prefer-inline')
-  $UserCopyWith<$Res> get author {
-    return $UserCopyWith<$Res>(_value.author, (value) {
+  $AuthorCopyWith<$Res> get author {
+    return $AuthorCopyWith<$Res>(_value.author, (value) {
       return _then(_value.copyWith(author: value) as $Val);
     });
   }
@@ -207,16 +214,17 @@ abstract class _$$_FileMessageCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {User author,
+      {Author author,
       DateTime? createdAt,
       String id,
+      String? roomId,
       bool isDeleted,
       bool isEdited,
       bool isOwn,
       bool isSeen,
       bool isShowSeen,
       QuotedMessageInfo? quotedMessageInfo,
-      Status status,
+      Status? status,
       String text,
       MessageType type,
       DateTime? updatedAt,
@@ -226,7 +234,7 @@ abstract class _$$_FileMessageCopyWith<$Res>
       String name});
 
   @override
-  $UserCopyWith<$Res> get author;
+  $AuthorCopyWith<$Res> get author;
   @override
   $QuotedMessageInfoCopyWith<$Res>? get quotedMessageInfo;
 }
@@ -245,13 +253,14 @@ class __$$_FileMessageCopyWithImpl<$Res>
     Object? author = null,
     Object? createdAt = freezed,
     Object? id = null,
+    Object? roomId = freezed,
     Object? isDeleted = null,
     Object? isEdited = null,
     Object? isOwn = null,
     Object? isSeen = null,
     Object? isShowSeen = null,
     Object? quotedMessageInfo = freezed,
-    Object? status = null,
+    Object? status = freezed,
     Object? text = null,
     Object? type = null,
     Object? updatedAt = freezed,
@@ -264,7 +273,7 @@ class __$$_FileMessageCopyWithImpl<$Res>
       author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
-              as User,
+              as Author,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -273,6 +282,10 @@ class __$$_FileMessageCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
+      roomId: freezed == roomId
+          ? _value.roomId
+          : roomId // ignore: cast_nullable_to_non_nullable
+              as String?,
       isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
@@ -297,10 +310,10 @@ class __$$_FileMessageCopyWithImpl<$Res>
           ? _value.quotedMessageInfo
           : quotedMessageInfo // ignore: cast_nullable_to_non_nullable
               as QuotedMessageInfo?,
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Status,
+              as Status?,
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -337,9 +350,10 @@ class __$$_FileMessageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_FileMessage implements _FileMessage {
   const _$_FileMessage(
-      {this.author = const User(),
+      {this.author = const Author(),
       this.createdAt,
       this.id = '',
+      this.roomId,
       this.isDeleted = false,
       this.isEdited = false,
       this.isOwn = false,
@@ -360,12 +374,14 @@ class _$_FileMessage implements _FileMessage {
 
   @override
   @JsonKey()
-  final User author;
+  final Author author;
   @override
   final DateTime? createdAt;
   @override
   @JsonKey()
   final String id;
+  @override
+  final String? roomId;
   @override
   @JsonKey()
   final bool isDeleted;
@@ -385,7 +401,7 @@ class _$_FileMessage implements _FileMessage {
   final QuotedMessageInfo? quotedMessageInfo;
   @override
   @JsonKey()
-  final Status status;
+  final Status? status;
   @override
   @JsonKey()
   final String text;
@@ -407,7 +423,7 @@ class _$_FileMessage implements _FileMessage {
 
   @override
   String toString() {
-    return 'FileMessage(author: $author, createdAt: $createdAt, id: $id, isDeleted: $isDeleted, isEdited: $isEdited, isOwn: $isOwn, isSeen: $isSeen, isShowSeen: $isShowSeen, quotedMessageInfo: $quotedMessageInfo, status: $status, text: $text, type: $type, updatedAt: $updatedAt, uri: $uri, height: $height, size: $size, name: $name)';
+    return 'FileMessage(author: $author, createdAt: $createdAt, id: $id, roomId: $roomId, isDeleted: $isDeleted, isEdited: $isEdited, isOwn: $isOwn, isSeen: $isSeen, isShowSeen: $isShowSeen, quotedMessageInfo: $quotedMessageInfo, status: $status, text: $text, type: $type, updatedAt: $updatedAt, uri: $uri, height: $height, size: $size, name: $name)';
   }
 
   @override
@@ -419,6 +435,7 @@ class _$_FileMessage implements _FileMessage {
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.id, id) || other.id == id) &&
+            (identical(other.roomId, roomId) || other.roomId == roomId) &&
             (identical(other.isDeleted, isDeleted) ||
                 other.isDeleted == isDeleted) &&
             (identical(other.isEdited, isEdited) ||
@@ -447,6 +464,7 @@ class _$_FileMessage implements _FileMessage {
       author,
       createdAt,
       id,
+      roomId,
       isDeleted,
       isEdited,
       isOwn,
@@ -478,16 +496,17 @@ class _$_FileMessage implements _FileMessage {
 
 abstract class _FileMessage implements FileMessage {
   const factory _FileMessage(
-      {final User author,
+      {final Author author,
       final DateTime? createdAt,
       final String id,
+      final String? roomId,
       final bool isDeleted,
       final bool isEdited,
       final bool isOwn,
       final bool isSeen,
       final bool isShowSeen,
       final QuotedMessageInfo? quotedMessageInfo,
-      final Status status,
+      final Status? status,
       final String text,
       final MessageType type,
       final DateTime? updatedAt,
@@ -500,11 +519,13 @@ abstract class _FileMessage implements FileMessage {
       _$_FileMessage.fromJson;
 
   @override
-  User get author;
+  Author get author;
   @override
   DateTime? get createdAt;
   @override
   String get id;
+  @override
+  String? get roomId;
   @override
   bool get isDeleted;
   @override
@@ -518,7 +539,7 @@ abstract class _FileMessage implements FileMessage {
   @override
   QuotedMessageInfo? get quotedMessageInfo;
   @override
-  Status get status;
+  Status? get status;
   @override
   String get text;
   @override

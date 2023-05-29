@@ -9,16 +9,17 @@ part 'image_message.g.dart';
 @freezed
 class ImageMessage with Message, _$ImageMessage {
   const factory ImageMessage({
-    @Default(User()) User author,
+    @Default(Author()) Author author,
     DateTime? createdAt,
     @Default('') String id,
+    String? roomId,
     @Default(false) bool isDeleted,
     @Default(false) bool isEdited,
     @Default(false) bool isOwn,
     @Default(false) bool isSeen,
     @Default(false) bool isShowSeen,
     QuotedMessageInfo? quotedMessageInfo,
-    @Default(Status.delivered) Status status,
+    @Default(Status.delivered) Status? status,
     @Default('') String text,
     @Default(MessageType.image) MessageType type,
     DateTime? updatedAt,
@@ -26,6 +27,8 @@ class ImageMessage with Message, _$ImageMessage {
     @Default([]) List<AttachmentInfo> uris,
     double? height,
     double? width,
+    @Default('') String name,
+    @Default(0) int size,
     @Default('') String url,
   }) = _ImageMessage;
 

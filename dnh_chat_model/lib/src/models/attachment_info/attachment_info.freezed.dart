@@ -26,6 +26,7 @@ mixin _$AttachmentInfo {
   String get name => throw _privateConstructorUsedError;
   int get size => throw _privateConstructorUsedError;
   List<int> get byteData => throw _privateConstructorUsedError;
+  DateTime? get creationTime => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,7 +46,8 @@ abstract class $AttachmentInfoCopyWith<$Res> {
       String? downloadUrl,
       String name,
       int size,
-      List<int> byteData});
+      List<int> byteData,
+      DateTime? creationTime});
 }
 
 /// @nodoc
@@ -67,6 +69,7 @@ class _$AttachmentInfoCopyWithImpl<$Res, $Val extends AttachmentInfo>
     Object? name = null,
     Object? size = null,
     Object? byteData = null,
+    Object? creationTime = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -93,6 +96,10 @@ class _$AttachmentInfoCopyWithImpl<$Res, $Val extends AttachmentInfo>
           ? _value.byteData
           : byteData // ignore: cast_nullable_to_non_nullable
               as List<int>,
+      creationTime: freezed == creationTime
+          ? _value.creationTime
+          : creationTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -111,7 +118,8 @@ abstract class _$$_AttachmentInfoCopyWith<$Res>
       String? downloadUrl,
       String name,
       int size,
-      List<int> byteData});
+      List<int> byteData,
+      DateTime? creationTime});
 }
 
 /// @nodoc
@@ -131,6 +139,7 @@ class __$$_AttachmentInfoCopyWithImpl<$Res>
     Object? name = null,
     Object? size = null,
     Object? byteData = null,
+    Object? creationTime = freezed,
   }) {
     return _then(_$_AttachmentInfo(
       id: null == id
@@ -157,6 +166,10 @@ class __$$_AttachmentInfoCopyWithImpl<$Res>
           ? _value._byteData
           : byteData // ignore: cast_nullable_to_non_nullable
               as List<int>,
+      creationTime: freezed == creationTime
+          ? _value.creationTime
+          : creationTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -170,7 +183,8 @@ class _$_AttachmentInfo implements _AttachmentInfo {
       this.downloadUrl,
       required this.name,
       this.size = 0,
-      final List<int> byteData = const []})
+      final List<int> byteData = const [],
+      this.creationTime})
       : _byteData = byteData;
 
   factory _$_AttachmentInfo.fromJson(Map<String, dynamic> json) =>
@@ -197,8 +211,11 @@ class _$_AttachmentInfo implements _AttachmentInfo {
   }
 
   @override
+  final DateTime? creationTime;
+
+  @override
   String toString() {
-    return 'AttachmentInfo(id: $id, fileUrl: $fileUrl, downloadUrl: $downloadUrl, name: $name, size: $size, byteData: $byteData)';
+    return 'AttachmentInfo(id: $id, fileUrl: $fileUrl, downloadUrl: $downloadUrl, name: $name, size: $size, byteData: $byteData, creationTime: $creationTime)';
   }
 
   @override
@@ -212,13 +229,15 @@ class _$_AttachmentInfo implements _AttachmentInfo {
                 other.downloadUrl == downloadUrl) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.size, size) || other.size == size) &&
-            const DeepCollectionEquality().equals(other._byteData, _byteData));
+            const DeepCollectionEquality().equals(other._byteData, _byteData) &&
+            (identical(other.creationTime, creationTime) ||
+                other.creationTime == creationTime));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, fileUrl, downloadUrl, name,
-      size, const DeepCollectionEquality().hash(_byteData));
+      size, const DeepCollectionEquality().hash(_byteData), creationTime);
 
   @JsonKey(ignore: true)
   @override
@@ -241,7 +260,8 @@ abstract class _AttachmentInfo implements AttachmentInfo {
       final String? downloadUrl,
       required final String name,
       final int size,
-      final List<int> byteData}) = _$_AttachmentInfo;
+      final List<int> byteData,
+      final DateTime? creationTime}) = _$_AttachmentInfo;
 
   factory _AttachmentInfo.fromJson(Map<String, dynamic> json) =
       _$_AttachmentInfo.fromJson;
@@ -258,6 +278,8 @@ abstract class _AttachmentInfo implements AttachmentInfo {
   int get size;
   @override
   List<int> get byteData;
+  @override
+  DateTime? get creationTime;
   @override
   @JsonKey(ignore: true)
   _$$_AttachmentInfoCopyWith<_$_AttachmentInfo> get copyWith =>

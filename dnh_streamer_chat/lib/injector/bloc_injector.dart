@@ -14,7 +14,7 @@ class BLocInjector {
     injector.registerFactory<LoginBloc>(
       () => LoginBloc(
         secureConfigService: injector(),
-        authenticationAPi: injector(),
+        authenticationAPI: injector(),
       ),
     );
   }

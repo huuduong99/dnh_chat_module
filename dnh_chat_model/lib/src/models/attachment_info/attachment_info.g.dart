@@ -16,6 +16,9 @@ _$_AttachmentInfo _$$_AttachmentInfoFromJson(Map<String, dynamic> json) =>
       byteData:
           (json['byteData'] as List<dynamic>?)?.map((e) => e as int).toList() ??
               const [],
+      creationTime: json['creationTime'] == null
+          ? null
+          : DateTime.parse(json['creationTime'] as String),
     );
 
 Map<String, dynamic> _$$_AttachmentInfoToJson(_$_AttachmentInfo instance) =>
@@ -26,4 +29,5 @@ Map<String, dynamic> _$$_AttachmentInfoToJson(_$_AttachmentInfo instance) =>
       'name': instance.name,
       'size': instance.size,
       'byteData': instance.byteData,
+      'creationTime': instance.creationTime?.toIso8601String(),
     };

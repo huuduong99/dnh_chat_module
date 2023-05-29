@@ -9,15 +9,17 @@ import '../../../dnh_chat_model.dart';
 mixin Message {
   String get id;
 
+  String? get roomId;
+
   bool get isOwn;
 
-  User get author;
+  Author get author;
 
   DateTime? get createdAt;
 
   String get text;
 
-  Status get status;
+  Status? get status;
 
   QuotedMessageInfo? get quotedMessageInfo;
 
@@ -34,7 +36,6 @@ mixin Message {
   MessageType get type;
 
   Map<String, dynamic> toJson();
-
 }
 
 // @freezed

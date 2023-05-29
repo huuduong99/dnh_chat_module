@@ -9,12 +9,13 @@ part of 'text_message.dart';
 _$_TextMessage _$$_TextMessageFromJson(Map<String, dynamic> json) =>
     _$_TextMessage(
       author: json['author'] == null
-          ? const User()
-          : User.fromJson(json['author'] as Map<String, dynamic>),
+          ? const Author()
+          : Author.fromJson(json['author'] as Map<String, dynamic>),
       createdAt: json['createdAt'] == null
           ? null
           : DateTime.parse(json['createdAt'] as String),
       id: json['id'] as String? ?? '',
+      roomId: json['roomId'] as String?,
       isDeleted: json['isDeleted'] as bool? ?? false,
       isEdited: json['isEdited'] as bool? ?? false,
       isOwn: json['isOwn'] as bool? ?? false,
@@ -42,13 +43,14 @@ Map<String, dynamic> _$$_TextMessageToJson(_$_TextMessage instance) =>
       'author': instance.author,
       'createdAt': instance.createdAt?.toIso8601String(),
       'id': instance.id,
+      'roomId': instance.roomId,
       'isDeleted': instance.isDeleted,
       'isEdited': instance.isEdited,
       'isOwn': instance.isOwn,
       'isSeen': instance.isSeen,
       'isShowSeen': instance.isShowSeen,
       'quotedMessageInfo': instance.quotedMessageInfo,
-      'status': _$StatusEnumMap[instance.status]!,
+      'status': _$StatusEnumMap[instance.status],
       'text': instance.text,
       'type': _$MessageTypeEnumMap[instance.type]!,
       'updatedAt': instance.updatedAt?.toIso8601String(),

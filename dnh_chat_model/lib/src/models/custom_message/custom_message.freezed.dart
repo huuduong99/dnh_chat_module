@@ -20,9 +20,10 @@ CustomMessage _$CustomMessageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CustomMessage {
-  User get author => throw _privateConstructorUsedError;
+  Author get author => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
   String get id => throw _privateConstructorUsedError;
+  String? get roomId => throw _privateConstructorUsedError;
   bool get isDeleted => throw _privateConstructorUsedError;
   bool get isEdited => throw _privateConstructorUsedError;
   bool get isOwn => throw _privateConstructorUsedError;
@@ -30,7 +31,7 @@ mixin _$CustomMessage {
   bool get isShowSeen => throw _privateConstructorUsedError;
   QuotedMessageInfo? get quotedMessageInfo =>
       throw _privateConstructorUsedError;
-  Status get status => throw _privateConstructorUsedError;
+  Status? get status => throw _privateConstructorUsedError;
   String get text => throw _privateConstructorUsedError;
   MessageType get type => throw _privateConstructorUsedError;
   DateTime? get updatedAt => throw _privateConstructorUsedError;
@@ -48,21 +49,22 @@ abstract class $CustomMessageCopyWith<$Res> {
       _$CustomMessageCopyWithImpl<$Res, CustomMessage>;
   @useResult
   $Res call(
-      {User author,
+      {Author author,
       DateTime? createdAt,
       String id,
+      String? roomId,
       bool isDeleted,
       bool isEdited,
       bool isOwn,
       bool isSeen,
       bool isShowSeen,
       QuotedMessageInfo? quotedMessageInfo,
-      Status status,
+      Status? status,
       String text,
       MessageType type,
       DateTime? updatedAt});
 
-  $UserCopyWith<$Res> get author;
+  $AuthorCopyWith<$Res> get author;
   $QuotedMessageInfoCopyWith<$Res>? get quotedMessageInfo;
 }
 
@@ -82,13 +84,14 @@ class _$CustomMessageCopyWithImpl<$Res, $Val extends CustomMessage>
     Object? author = null,
     Object? createdAt = freezed,
     Object? id = null,
+    Object? roomId = freezed,
     Object? isDeleted = null,
     Object? isEdited = null,
     Object? isOwn = null,
     Object? isSeen = null,
     Object? isShowSeen = null,
     Object? quotedMessageInfo = freezed,
-    Object? status = null,
+    Object? status = freezed,
     Object? text = null,
     Object? type = null,
     Object? updatedAt = freezed,
@@ -97,7 +100,7 @@ class _$CustomMessageCopyWithImpl<$Res, $Val extends CustomMessage>
       author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
-              as User,
+              as Author,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -106,6 +109,10 @@ class _$CustomMessageCopyWithImpl<$Res, $Val extends CustomMessage>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
+      roomId: freezed == roomId
+          ? _value.roomId
+          : roomId // ignore: cast_nullable_to_non_nullable
+              as String?,
       isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
@@ -130,10 +137,10 @@ class _$CustomMessageCopyWithImpl<$Res, $Val extends CustomMessage>
           ? _value.quotedMessageInfo
           : quotedMessageInfo // ignore: cast_nullable_to_non_nullable
               as QuotedMessageInfo?,
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Status,
+              as Status?,
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -151,8 +158,8 @@ class _$CustomMessageCopyWithImpl<$Res, $Val extends CustomMessage>
 
   @override
   @pragma('vm:prefer-inline')
-  $UserCopyWith<$Res> get author {
-    return $UserCopyWith<$Res>(_value.author, (value) {
+  $AuthorCopyWith<$Res> get author {
+    return $AuthorCopyWith<$Res>(_value.author, (value) {
       return _then(_value.copyWith(author: value) as $Val);
     });
   }
@@ -179,22 +186,23 @@ abstract class _$$_CustomMessageCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {User author,
+      {Author author,
       DateTime? createdAt,
       String id,
+      String? roomId,
       bool isDeleted,
       bool isEdited,
       bool isOwn,
       bool isSeen,
       bool isShowSeen,
       QuotedMessageInfo? quotedMessageInfo,
-      Status status,
+      Status? status,
       String text,
       MessageType type,
       DateTime? updatedAt});
 
   @override
-  $UserCopyWith<$Res> get author;
+  $AuthorCopyWith<$Res> get author;
   @override
   $QuotedMessageInfoCopyWith<$Res>? get quotedMessageInfo;
 }
@@ -213,13 +221,14 @@ class __$$_CustomMessageCopyWithImpl<$Res>
     Object? author = null,
     Object? createdAt = freezed,
     Object? id = null,
+    Object? roomId = freezed,
     Object? isDeleted = null,
     Object? isEdited = null,
     Object? isOwn = null,
     Object? isSeen = null,
     Object? isShowSeen = null,
     Object? quotedMessageInfo = freezed,
-    Object? status = null,
+    Object? status = freezed,
     Object? text = null,
     Object? type = null,
     Object? updatedAt = freezed,
@@ -228,7 +237,7 @@ class __$$_CustomMessageCopyWithImpl<$Res>
       author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
-              as User,
+              as Author,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -237,6 +246,10 @@ class __$$_CustomMessageCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
+      roomId: freezed == roomId
+          ? _value.roomId
+          : roomId // ignore: cast_nullable_to_non_nullable
+              as String?,
       isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
@@ -261,10 +274,10 @@ class __$$_CustomMessageCopyWithImpl<$Res>
           ? _value.quotedMessageInfo
           : quotedMessageInfo // ignore: cast_nullable_to_non_nullable
               as QuotedMessageInfo?,
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Status,
+              as Status?,
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -285,9 +298,10 @@ class __$$_CustomMessageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CustomMessage implements _CustomMessage {
   const _$_CustomMessage(
-      {this.author = const User(),
+      {this.author = const Author(),
       this.createdAt,
       this.id = '',
+      this.roomId,
       this.isDeleted = false,
       this.isEdited = false,
       this.isOwn = false,
@@ -304,12 +318,14 @@ class _$_CustomMessage implements _CustomMessage {
 
   @override
   @JsonKey()
-  final User author;
+  final Author author;
   @override
   final DateTime? createdAt;
   @override
   @JsonKey()
   final String id;
+  @override
+  final String? roomId;
   @override
   @JsonKey()
   final bool isDeleted;
@@ -329,7 +345,7 @@ class _$_CustomMessage implements _CustomMessage {
   final QuotedMessageInfo? quotedMessageInfo;
   @override
   @JsonKey()
-  final Status status;
+  final Status? status;
   @override
   @JsonKey()
   final String text;
@@ -341,7 +357,7 @@ class _$_CustomMessage implements _CustomMessage {
 
   @override
   String toString() {
-    return 'CustomMessage(author: $author, createdAt: $createdAt, id: $id, isDeleted: $isDeleted, isEdited: $isEdited, isOwn: $isOwn, isSeen: $isSeen, isShowSeen: $isShowSeen, quotedMessageInfo: $quotedMessageInfo, status: $status, text: $text, type: $type, updatedAt: $updatedAt)';
+    return 'CustomMessage(author: $author, createdAt: $createdAt, id: $id, roomId: $roomId, isDeleted: $isDeleted, isEdited: $isEdited, isOwn: $isOwn, isSeen: $isSeen, isShowSeen: $isShowSeen, quotedMessageInfo: $quotedMessageInfo, status: $status, text: $text, type: $type, updatedAt: $updatedAt)';
   }
 
   @override
@@ -353,6 +369,7 @@ class _$_CustomMessage implements _CustomMessage {
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.id, id) || other.id == id) &&
+            (identical(other.roomId, roomId) || other.roomId == roomId) &&
             (identical(other.isDeleted, isDeleted) ||
                 other.isDeleted == isDeleted) &&
             (identical(other.isEdited, isEdited) ||
@@ -377,6 +394,7 @@ class _$_CustomMessage implements _CustomMessage {
       author,
       createdAt,
       id,
+      roomId,
       isDeleted,
       isEdited,
       isOwn,
@@ -404,16 +422,17 @@ class _$_CustomMessage implements _CustomMessage {
 
 abstract class _CustomMessage implements CustomMessage {
   const factory _CustomMessage(
-      {final User author,
+      {final Author author,
       final DateTime? createdAt,
       final String id,
+      final String? roomId,
       final bool isDeleted,
       final bool isEdited,
       final bool isOwn,
       final bool isSeen,
       final bool isShowSeen,
       final QuotedMessageInfo? quotedMessageInfo,
-      final Status status,
+      final Status? status,
       final String text,
       final MessageType type,
       final DateTime? updatedAt}) = _$_CustomMessage;
@@ -422,11 +441,13 @@ abstract class _CustomMessage implements CustomMessage {
       _$_CustomMessage.fromJson;
 
   @override
-  User get author;
+  Author get author;
   @override
   DateTime? get createdAt;
   @override
   String get id;
+  @override
+  String? get roomId;
   @override
   bool get isDeleted;
   @override
@@ -440,7 +461,7 @@ abstract class _CustomMessage implements CustomMessage {
   @override
   QuotedMessageInfo? get quotedMessageInfo;
   @override
-  Status get status;
+  Status? get status;
   @override
   String get text;
   @override

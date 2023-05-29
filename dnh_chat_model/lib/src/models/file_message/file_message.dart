@@ -9,16 +9,17 @@ part 'file_message.g.dart';
 @freezed
 class FileMessage with Message, _$FileMessage {
   const factory FileMessage({
-    @Default(User()) User author,
+    @Default(Author()) Author author,
     DateTime? createdAt,
     @Default('') String id,
+    String? roomId,
     @Default(false) bool isDeleted,
     @Default(false) bool isEdited,
     @Default(false) bool isOwn,
     @Default(false) bool isSeen,
     @Default(false) bool isShowSeen,
     QuotedMessageInfo? quotedMessageInfo,
-    @Default(Status.delivered) Status status,
+    @Default(Status.delivered) Status? status,
     @Default('') String text,
     @Default(MessageType.file) MessageType type,
     DateTime? updatedAt,

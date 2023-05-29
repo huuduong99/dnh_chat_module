@@ -20,9 +20,10 @@ TextMessage _$TextMessageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TextMessage {
-  User get author => throw _privateConstructorUsedError;
+  Author get author => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
   String get id => throw _privateConstructorUsedError;
+  String? get roomId => throw _privateConstructorUsedError;
   bool get isDeleted => throw _privateConstructorUsedError;
   bool get isEdited => throw _privateConstructorUsedError;
   bool get isOwn => throw _privateConstructorUsedError;
@@ -30,7 +31,7 @@ mixin _$TextMessage {
   bool get isShowSeen => throw _privateConstructorUsedError;
   QuotedMessageInfo? get quotedMessageInfo =>
       throw _privateConstructorUsedError;
-  Status get status => throw _privateConstructorUsedError;
+  Status? get status => throw _privateConstructorUsedError;
   String get text => throw _privateConstructorUsedError;
   MessageType get type => throw _privateConstructorUsedError;
   DateTime? get updatedAt => throw _privateConstructorUsedError;
@@ -49,22 +50,23 @@ abstract class $TextMessageCopyWith<$Res> {
       _$TextMessageCopyWithImpl<$Res, TextMessage>;
   @useResult
   $Res call(
-      {User author,
+      {Author author,
       DateTime? createdAt,
       String id,
+      String? roomId,
       bool isDeleted,
       bool isEdited,
       bool isOwn,
       bool isSeen,
       bool isShowSeen,
       QuotedMessageInfo? quotedMessageInfo,
-      Status status,
+      Status? status,
       String text,
       MessageType type,
       DateTime? updatedAt,
       PreviewData? previewData});
 
-  $UserCopyWith<$Res> get author;
+  $AuthorCopyWith<$Res> get author;
   $QuotedMessageInfoCopyWith<$Res>? get quotedMessageInfo;
   $PreviewDataCopyWith<$Res>? get previewData;
 }
@@ -85,13 +87,14 @@ class _$TextMessageCopyWithImpl<$Res, $Val extends TextMessage>
     Object? author = null,
     Object? createdAt = freezed,
     Object? id = null,
+    Object? roomId = freezed,
     Object? isDeleted = null,
     Object? isEdited = null,
     Object? isOwn = null,
     Object? isSeen = null,
     Object? isShowSeen = null,
     Object? quotedMessageInfo = freezed,
-    Object? status = null,
+    Object? status = freezed,
     Object? text = null,
     Object? type = null,
     Object? updatedAt = freezed,
@@ -101,7 +104,7 @@ class _$TextMessageCopyWithImpl<$Res, $Val extends TextMessage>
       author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
-              as User,
+              as Author,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -110,6 +113,10 @@ class _$TextMessageCopyWithImpl<$Res, $Val extends TextMessage>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
+      roomId: freezed == roomId
+          ? _value.roomId
+          : roomId // ignore: cast_nullable_to_non_nullable
+              as String?,
       isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
@@ -134,10 +141,10 @@ class _$TextMessageCopyWithImpl<$Res, $Val extends TextMessage>
           ? _value.quotedMessageInfo
           : quotedMessageInfo // ignore: cast_nullable_to_non_nullable
               as QuotedMessageInfo?,
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Status,
+              as Status?,
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -159,8 +166,8 @@ class _$TextMessageCopyWithImpl<$Res, $Val extends TextMessage>
 
   @override
   @pragma('vm:prefer-inline')
-  $UserCopyWith<$Res> get author {
-    return $UserCopyWith<$Res>(_value.author, (value) {
+  $AuthorCopyWith<$Res> get author {
+    return $AuthorCopyWith<$Res>(_value.author, (value) {
       return _then(_value.copyWith(author: value) as $Val);
     });
   }
@@ -199,23 +206,24 @@ abstract class _$$_TextMessageCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {User author,
+      {Author author,
       DateTime? createdAt,
       String id,
+      String? roomId,
       bool isDeleted,
       bool isEdited,
       bool isOwn,
       bool isSeen,
       bool isShowSeen,
       QuotedMessageInfo? quotedMessageInfo,
-      Status status,
+      Status? status,
       String text,
       MessageType type,
       DateTime? updatedAt,
       PreviewData? previewData});
 
   @override
-  $UserCopyWith<$Res> get author;
+  $AuthorCopyWith<$Res> get author;
   @override
   $QuotedMessageInfoCopyWith<$Res>? get quotedMessageInfo;
   @override
@@ -236,13 +244,14 @@ class __$$_TextMessageCopyWithImpl<$Res>
     Object? author = null,
     Object? createdAt = freezed,
     Object? id = null,
+    Object? roomId = freezed,
     Object? isDeleted = null,
     Object? isEdited = null,
     Object? isOwn = null,
     Object? isSeen = null,
     Object? isShowSeen = null,
     Object? quotedMessageInfo = freezed,
-    Object? status = null,
+    Object? status = freezed,
     Object? text = null,
     Object? type = null,
     Object? updatedAt = freezed,
@@ -252,7 +261,7 @@ class __$$_TextMessageCopyWithImpl<$Res>
       author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
-              as User,
+              as Author,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -261,6 +270,10 @@ class __$$_TextMessageCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
+      roomId: freezed == roomId
+          ? _value.roomId
+          : roomId // ignore: cast_nullable_to_non_nullable
+              as String?,
       isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
@@ -285,10 +298,10 @@ class __$$_TextMessageCopyWithImpl<$Res>
           ? _value.quotedMessageInfo
           : quotedMessageInfo // ignore: cast_nullable_to_non_nullable
               as QuotedMessageInfo?,
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Status,
+              as Status?,
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -313,9 +326,10 @@ class __$$_TextMessageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TextMessage implements _TextMessage {
   const _$_TextMessage(
-      {this.author = const User(),
+      {this.author = const Author(),
       this.createdAt,
       this.id = '',
+      this.roomId,
       this.isDeleted = false,
       this.isEdited = false,
       this.isOwn = false,
@@ -333,12 +347,14 @@ class _$_TextMessage implements _TextMessage {
 
   @override
   @JsonKey()
-  final User author;
+  final Author author;
   @override
   final DateTime? createdAt;
   @override
   @JsonKey()
   final String id;
+  @override
+  final String? roomId;
   @override
   @JsonKey()
   final bool isDeleted;
@@ -358,7 +374,7 @@ class _$_TextMessage implements _TextMessage {
   final QuotedMessageInfo? quotedMessageInfo;
   @override
   @JsonKey()
-  final Status status;
+  final Status? status;
   @override
   @JsonKey()
   final String text;
@@ -372,7 +388,7 @@ class _$_TextMessage implements _TextMessage {
 
   @override
   String toString() {
-    return 'TextMessage(author: $author, createdAt: $createdAt, id: $id, isDeleted: $isDeleted, isEdited: $isEdited, isOwn: $isOwn, isSeen: $isSeen, isShowSeen: $isShowSeen, quotedMessageInfo: $quotedMessageInfo, status: $status, text: $text, type: $type, updatedAt: $updatedAt, previewData: $previewData)';
+    return 'TextMessage(author: $author, createdAt: $createdAt, id: $id, roomId: $roomId, isDeleted: $isDeleted, isEdited: $isEdited, isOwn: $isOwn, isSeen: $isSeen, isShowSeen: $isShowSeen, quotedMessageInfo: $quotedMessageInfo, status: $status, text: $text, type: $type, updatedAt: $updatedAt, previewData: $previewData)';
   }
 
   @override
@@ -384,6 +400,7 @@ class _$_TextMessage implements _TextMessage {
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.id, id) || other.id == id) &&
+            (identical(other.roomId, roomId) || other.roomId == roomId) &&
             (identical(other.isDeleted, isDeleted) ||
                 other.isDeleted == isDeleted) &&
             (identical(other.isEdited, isEdited) ||
@@ -410,6 +427,7 @@ class _$_TextMessage implements _TextMessage {
       author,
       createdAt,
       id,
+      roomId,
       isDeleted,
       isEdited,
       isOwn,
@@ -438,16 +456,17 @@ class _$_TextMessage implements _TextMessage {
 
 abstract class _TextMessage implements TextMessage {
   const factory _TextMessage(
-      {final User author,
+      {final Author author,
       final DateTime? createdAt,
       final String id,
+      final String? roomId,
       final bool isDeleted,
       final bool isEdited,
       final bool isOwn,
       final bool isSeen,
       final bool isShowSeen,
       final QuotedMessageInfo? quotedMessageInfo,
-      final Status status,
+      final Status? status,
       final String text,
       final MessageType type,
       final DateTime? updatedAt,
@@ -457,11 +476,13 @@ abstract class _TextMessage implements TextMessage {
       _$_TextMessage.fromJson;
 
   @override
-  User get author;
+  Author get author;
   @override
   DateTime? get createdAt;
   @override
   String get id;
+  @override
+  String? get roomId;
   @override
   bool get isDeleted;
   @override
@@ -475,7 +496,7 @@ abstract class _TextMessage implements TextMessage {
   @override
   QuotedMessageInfo? get quotedMessageInfo;
   @override
-  Status get status;
+  Status? get status;
   @override
   String get text;
   @override

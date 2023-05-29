@@ -14,14 +14,30 @@ import 'package:flutter/services.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/checkbox_check.svg
+  SvgGenImage get checkboxCheck =>
+      const SvgGenImage('assets/icons/checkbox_check.svg');
+
+  /// File path: assets/icons/download.svg
+  SvgGenImage get download => const SvgGenImage('assets/icons/download.svg');
+
   /// File path: assets/icons/email.svg
   SvgGenImage get email => const SvgGenImage('assets/icons/email.svg');
+
+  /// File path: assets/icons/error.svg
+  SvgGenImage get error => const SvgGenImage('assets/icons/error.svg');
+
+  /// File path: assets/icons/filter.svg
+  SvgGenImage get filter => const SvgGenImage('assets/icons/filter.svg');
 
   /// File path: assets/icons/ic_setting.svg
   SvgGenImage get icSetting => const SvgGenImage('assets/icons/ic_setting.svg');
 
   /// File path: assets/icons/image-alt.svg
   SvgGenImage get imageAlt => const SvgGenImage('assets/icons/image-alt.svg');
+
+  /// File path: assets/icons/images.svg
+  SvgGenImage get images => const SvgGenImage('assets/icons/images.svg');
 
   /// File path: assets/icons/info_icon.svg
   SvgGenImage get infoIcon => const SvgGenImage('assets/icons/info_icon.svg');
@@ -30,8 +46,17 @@ class $AssetsIconsGen {
   SvgGenImage get keyboardRight =>
       const SvgGenImage('assets/icons/keyboard_right.svg');
 
+  /// File path: assets/icons/no_avatar.svg
+  SvgGenImage get noAvatar => const SvgGenImage('assets/icons/no_avatar.svg');
+
+  /// File path: assets/icons/no_result.svg
+  SvgGenImage get noResult => const SvgGenImage('assets/icons/no_result.svg');
+
   /// File path: assets/icons/password.svg
   SvgGenImage get password => const SvgGenImage('assets/icons/password.svg');
+
+  /// File path: assets/icons/search.svg
+  SvgGenImage get search => const SvgGenImage('assets/icons/search.svg');
 
   /// File path: assets/icons/uk_icon.png
   AssetGenImage get ukIcon => const AssetGenImage('assets/icons/uk_icon.png');
@@ -44,12 +69,20 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<dynamic> get values => [
+        checkboxCheck,
+        download,
         email,
+        error,
+        filter,
         icSetting,
         imageAlt,
+        images,
         infoIcon,
         keyboardRight,
+        noAvatar,
+        noResult,
         password,
+        search,
         ukIcon,
         userIcon,
         viIcon
@@ -59,9 +92,17 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/empty_message.svg
+  SvgGenImage get emptyMessage =>
+      const SvgGenImage('assets/images/empty_message.svg');
+
   /// File path: assets/images/fcm_graph.png
   AssetGenImage get fcmGraph =>
       const AssetGenImage('assets/images/fcm_graph.png');
+
+  /// File path: assets/images/ic_conversation_empty.png
+  AssetGenImage get icConversationEmpty =>
+      const AssetGenImage('assets/images/ic_conversation_empty.png');
 
   /// File path: assets/images/icon.png
   AssetGenImage get icon => const AssetGenImage('assets/images/icon.png');
@@ -74,7 +115,8 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/no_image.png');
 
   /// List of all assets
-  List<dynamic> get values => [fcmGraph, icon, noAvatar, noImage];
+  List<dynamic> get values =>
+      [emptyMessage, fcmGraph, icConversationEmpty, icon, noAvatar, noImage];
 }
 
 class Assets {

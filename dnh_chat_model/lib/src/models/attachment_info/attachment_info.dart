@@ -13,6 +13,7 @@ class AttachmentInfo with _$AttachmentInfo {
     required String name,
     @Default(0) int size,
     @Default([]) List<int> byteData,
+    DateTime? creationTime,
   }) = _AttachmentInfo;
 
   factory AttachmentInfo.fromJson(Map<String, dynamic> json) =>

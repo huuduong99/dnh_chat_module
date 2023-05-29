@@ -9,12 +9,13 @@ part of 'image_message.dart';
 _$_ImageMessage _$$_ImageMessageFromJson(Map<String, dynamic> json) =>
     _$_ImageMessage(
       author: json['author'] == null
-          ? const User()
-          : User.fromJson(json['author'] as Map<String, dynamic>),
+          ? const Author()
+          : Author.fromJson(json['author'] as Map<String, dynamic>),
       createdAt: json['createdAt'] == null
           ? null
           : DateTime.parse(json['createdAt'] as String),
       id: json['id'] as String? ?? '',
+      roomId: json['roomId'] as String?,
       isDeleted: json['isDeleted'] as bool? ?? false,
       isEdited: json['isEdited'] as bool? ?? false,
       isOwn: json['isOwn'] as bool? ?? false,
@@ -28,7 +29,7 @@ _$_ImageMessage _$$_ImageMessageFromJson(Map<String, dynamic> json) =>
           Status.delivered,
       text: json['text'] as String? ?? '',
       type: $enumDecodeNullable(_$MessageTypeEnumMap, json['type']) ??
-          MessageType.custom,
+          MessageType.image,
       updatedAt: json['updatedAt'] == null
           ? null
           : DateTime.parse(json['updatedAt'] as String),
@@ -39,6 +40,8 @@ _$_ImageMessage _$$_ImageMessageFromJson(Map<String, dynamic> json) =>
           const [],
       height: (json['height'] as num?)?.toDouble(),
       width: (json['width'] as num?)?.toDouble(),
+      name: json['name'] as String? ?? '',
+      size: json['size'] as int? ?? 0,
       url: json['url'] as String? ?? '',
     );
 
@@ -47,13 +50,14 @@ Map<String, dynamic> _$$_ImageMessageToJson(_$_ImageMessage instance) =>
       'author': instance.author,
       'createdAt': instance.createdAt?.toIso8601String(),
       'id': instance.id,
+      'roomId': instance.roomId,
       'isDeleted': instance.isDeleted,
       'isEdited': instance.isEdited,
       'isOwn': instance.isOwn,
       'isSeen': instance.isSeen,
       'isShowSeen': instance.isShowSeen,
       'quotedMessageInfo': instance.quotedMessageInfo,
-      'status': _$StatusEnumMap[instance.status]!,
+      'status': _$StatusEnumMap[instance.status],
       'text': instance.text,
       'type': _$MessageTypeEnumMap[instance.type]!,
       'updatedAt': instance.updatedAt?.toIso8601String(),
@@ -61,6 +65,8 @@ Map<String, dynamic> _$$_ImageMessageToJson(_$_ImageMessage instance) =>
       'uris': instance.uris,
       'height': instance.height,
       'width': instance.width,
+      'name': instance.name,
+      'size': instance.size,
       'url': instance.url,
     };
 
