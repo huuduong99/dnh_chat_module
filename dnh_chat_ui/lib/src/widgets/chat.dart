@@ -180,10 +180,10 @@ class ChatUI extends StatefulWidget {
   final void Function()? onAttachmentPressed;
 
   /// See [Message.onAvatarTap]
-  final void Function(types.User)? onAvatarTap;
+  final void Function(types.Author)? onAvatarTap;
 
   // Called when uses taps on seen user avatar
-  final void Function(types.User)? onSeenUserTap;
+  final void Function(types.Author)? onSeenUserTap;
 
   final Function(String? userId, String? userName)? onTapMention;
 
@@ -303,7 +303,7 @@ class ChatUI extends StatefulWidget {
   final bool usePreviewData;
 
   /// See [InheritedUser.user]
-  final types.User user;
+  final types.Author user;
 
   final BuildContext? imageGalleryContext;
 

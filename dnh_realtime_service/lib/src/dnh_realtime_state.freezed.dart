@@ -48,9 +48,10 @@ mixin _$DnhRealtimeState {
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -82,9 +83,10 @@ mixin _$DnhRealtimeState {
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -114,9 +116,10 @@ mixin _$DnhRealtimeState {
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -339,9 +342,10 @@ class _$DnhRealtimeStateViewCountChanged
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -376,9 +380,10 @@ class _$DnhRealtimeStateViewCountChanged
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -411,9 +416,10 @@ class _$DnhRealtimeStateViewCountChanged
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -609,9 +615,10 @@ class _$DnhRealtimeStateIntial implements DnhRealtimeStateIntial {
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -646,9 +653,10 @@ class _$DnhRealtimeStateIntial implements DnhRealtimeStateIntial {
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -681,9 +689,10 @@ class _$DnhRealtimeStateIntial implements DnhRealtimeStateIntial {
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -912,9 +921,10 @@ class _$DnhRealtimeStateCommentAdded implements DnhRealtimeStateCommentAdded {
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -949,9 +959,10 @@ class _$DnhRealtimeStateCommentAdded implements DnhRealtimeStateCommentAdded {
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -984,9 +995,10 @@ class _$DnhRealtimeStateCommentAdded implements DnhRealtimeStateCommentAdded {
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -1225,9 +1237,10 @@ class _$DnhRealtimeStateCommentUpdated
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -1262,9 +1275,10 @@ class _$DnhRealtimeStateCommentUpdated
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -1297,9 +1311,10 @@ class _$DnhRealtimeStateCommentUpdated
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -1538,9 +1553,10 @@ class _$DnhRealtimeStateCommentDeleted
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -1575,9 +1591,10 @@ class _$DnhRealtimeStateCommentDeleted
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -1610,9 +1627,10 @@ class _$DnhRealtimeStateCommentDeleted
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -1842,9 +1860,10 @@ class _$DnhRealtimeStatePostAdded implements DnhRealtimeStatePostAdded {
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -1879,9 +1898,10 @@ class _$DnhRealtimeStatePostAdded implements DnhRealtimeStatePostAdded {
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -1914,9 +1934,10 @@ class _$DnhRealtimeStatePostAdded implements DnhRealtimeStatePostAdded {
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -2145,9 +2166,10 @@ class _$DnhRealtimeStatePostUpdated implements DnhRealtimeStatePostUpdated {
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -2182,9 +2204,10 @@ class _$DnhRealtimeStatePostUpdated implements DnhRealtimeStatePostUpdated {
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -2217,9 +2240,10 @@ class _$DnhRealtimeStatePostUpdated implements DnhRealtimeStatePostUpdated {
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -2455,9 +2479,10 @@ class _$RealtiemStatePostDeleted implements RealtiemStatePostDeleted {
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -2492,9 +2517,10 @@ class _$RealtiemStatePostDeleted implements RealtiemStatePostDeleted {
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -2527,9 +2553,10 @@ class _$RealtiemStatePostDeleted implements RealtiemStatePostDeleted {
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -2768,9 +2795,10 @@ class _$DnhRealtimeStateLiveClosed implements DnhRealtimeStateLiveClosed {
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -2805,9 +2833,10 @@ class _$DnhRealtimeStateLiveClosed implements DnhRealtimeStateLiveClosed {
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -2840,9 +2869,10 @@ class _$DnhRealtimeStateLiveClosed implements DnhRealtimeStateLiveClosed {
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -3078,9 +3108,10 @@ class _$DnhRealtimeStatePostPined implements DnhRealtimeStatePostPined {
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -3115,9 +3146,10 @@ class _$DnhRealtimeStatePostPined implements DnhRealtimeStatePostPined {
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -3150,9 +3182,10 @@ class _$DnhRealtimeStatePostPined implements DnhRealtimeStatePostPined {
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -3390,9 +3423,10 @@ class _$DnhRealtimeStatePostUnPin implements DnhRealtimeStatePostUnPin {
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -3427,9 +3461,10 @@ class _$DnhRealtimeStatePostUnPin implements DnhRealtimeStatePostUnPin {
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -3462,9 +3497,10 @@ class _$DnhRealtimeStatePostUnPin implements DnhRealtimeStatePostUnPin {
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -3690,9 +3726,10 @@ class _$DnhRealtimeStateSocketConnected
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -3727,9 +3764,10 @@ class _$DnhRealtimeStateSocketConnected
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -3762,9 +3800,10 @@ class _$DnhRealtimeStateSocketConnected
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -4002,9 +4041,10 @@ class _$DnhRealtimeStateLiveRecordStopped
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -4039,9 +4079,10 @@ class _$DnhRealtimeStateLiveRecordStopped
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -4074,9 +4115,10 @@ class _$DnhRealtimeStateLiveRecordStopped
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -4302,9 +4344,10 @@ class _$DnhRealtimeStateSocketConnectFailed
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -4339,9 +4382,10 @@ class _$DnhRealtimeStateSocketConnectFailed
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -4374,9 +4418,10 @@ class _$DnhRealtimeStateSocketConnectFailed
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -4600,9 +4645,10 @@ class _$DnhRealtimeStateSocketNetworkFailed
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -4637,9 +4683,10 @@ class _$DnhRealtimeStateSocketNetworkFailed
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -4672,9 +4719,10 @@ class _$DnhRealtimeStateSocketNetworkFailed
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -4906,9 +4954,10 @@ class _$DnhRealtimeStateLiveViewCountReceived
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -4943,9 +4992,10 @@ class _$DnhRealtimeStateLiveViewCountReceived
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -4978,9 +5028,10 @@ class _$DnhRealtimeStateLiveViewCountReceived
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -5221,9 +5272,10 @@ class _$DnhRealtimeStateShopStatusGet implements DnhRealtimeStateShopStatusGet {
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -5258,9 +5310,10 @@ class _$DnhRealtimeStateShopStatusGet implements DnhRealtimeStateShopStatusGet {
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -5293,9 +5346,10 @@ class _$DnhRealtimeStateShopStatusGet implements DnhRealtimeStateShopStatusGet {
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -5438,7 +5492,7 @@ abstract class _$$DnhRealtimeStateUserStatusReceivedCopyWith<$Res> {
           $Res Function(_$DnhRealtimeStateUserStatusReceived) then) =
       __$$DnhRealtimeStateUserStatusReceivedCopyWithImpl<$Res>;
   @useResult
-  $Res call({String listUserStatus, String? socketId});
+  $Res call({Map<String, dynamic> listUserStatus, String? socketId});
 }
 
 /// @nodoc
@@ -5459,9 +5513,9 @@ class __$$DnhRealtimeStateUserStatusReceivedCopyWithImpl<$Res>
   }) {
     return _then(_$DnhRealtimeStateUserStatusReceived(
       listUserStatus: null == listUserStatus
-          ? _value.listUserStatus
+          ? _value._listUserStatus
           : listUserStatus // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Map<String, dynamic>,
       socketId: freezed == socketId
           ? _value.socketId
           : socketId // ignore: cast_nullable_to_non_nullable
@@ -5475,10 +5529,17 @@ class __$$DnhRealtimeStateUserStatusReceivedCopyWithImpl<$Res>
 class _$DnhRealtimeStateUserStatusReceived
     implements DnhRealtimeStateUserStatusReceived {
   const _$DnhRealtimeStateUserStatusReceived(
-      {required this.listUserStatus, this.socketId});
+      {required final Map<String, dynamic> listUserStatus, this.socketId})
+      : _listUserStatus = listUserStatus;
 
+  final Map<String, dynamic> _listUserStatus;
   @override
-  final String listUserStatus;
+  Map<String, dynamic> get listUserStatus {
+    if (_listUserStatus is EqualUnmodifiableMapView) return _listUserStatus;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_listUserStatus);
+  }
+
   @override
   final String? socketId;
 
@@ -5528,9 +5589,10 @@ class _$DnhRealtimeStateUserStatusReceived
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -5565,9 +5627,10 @@ class _$DnhRealtimeStateUserStatusReceived
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -5600,9 +5663,10 @@ class _$DnhRealtimeStateUserStatusReceived
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -5728,10 +5792,10 @@ class _$DnhRealtimeStateUserStatusReceived
 
 abstract class DnhRealtimeStateUserStatusReceived implements DnhRealtimeState {
   const factory DnhRealtimeStateUserStatusReceived(
-      {required final String listUserStatus,
+      {required final Map<String, dynamic> listUserStatus,
       final String? socketId}) = _$DnhRealtimeStateUserStatusReceived;
 
-  String get listUserStatus;
+  Map<String, dynamic> get listUserStatus;
   String? get socketId;
   @JsonKey(ignore: true)
   _$$DnhRealtimeStateUserStatusReceivedCopyWith<
@@ -5746,7 +5810,7 @@ abstract class _$$DnhRealtimeStateUserStatusChangedCopyWith<$Res> {
           $Res Function(_$DnhRealtimeStateUserStatusChanged) then) =
       __$$DnhRealtimeStateUserStatusChangedCopyWithImpl<$Res>;
   @useResult
-  $Res call({String userStatus, String? socketId});
+  $Res call({Map<String, dynamic> userStatus, String? socketId});
 }
 
 /// @nodoc
@@ -5767,9 +5831,9 @@ class __$$DnhRealtimeStateUserStatusChangedCopyWithImpl<$Res>
   }) {
     return _then(_$DnhRealtimeStateUserStatusChanged(
       userStatus: null == userStatus
-          ? _value.userStatus
+          ? _value._userStatus
           : userStatus // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Map<String, dynamic>,
       socketId: freezed == socketId
           ? _value.socketId
           : socketId // ignore: cast_nullable_to_non_nullable
@@ -5783,10 +5847,17 @@ class __$$DnhRealtimeStateUserStatusChangedCopyWithImpl<$Res>
 class _$DnhRealtimeStateUserStatusChanged
     implements DnhRealtimeStateUserStatusChanged {
   const _$DnhRealtimeStateUserStatusChanged(
-      {required this.userStatus, this.socketId});
+      {required final Map<String, dynamic> userStatus, this.socketId})
+      : _userStatus = userStatus;
 
+  final Map<String, dynamic> _userStatus;
   @override
-  final String userStatus;
+  Map<String, dynamic> get userStatus {
+    if (_userStatus is EqualUnmodifiableMapView) return _userStatus;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_userStatus);
+  }
+
   @override
   final String? socketId;
 
@@ -5836,9 +5907,10 @@ class _$DnhRealtimeStateUserStatusChanged
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -5873,9 +5945,10 @@ class _$DnhRealtimeStateUserStatusChanged
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -5908,9 +5981,10 @@ class _$DnhRealtimeStateUserStatusChanged
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -6036,10 +6110,10 @@ class _$DnhRealtimeStateUserStatusChanged
 
 abstract class DnhRealtimeStateUserStatusChanged implements DnhRealtimeState {
   const factory DnhRealtimeStateUserStatusChanged(
-      {required final String userStatus,
+      {required final Map<String, dynamic> userStatus,
       final String? socketId}) = _$DnhRealtimeStateUserStatusChanged;
 
-  String get userStatus;
+  Map<String, dynamic> get userStatus;
   String? get socketId;
   @JsonKey(ignore: true)
   _$$DnhRealtimeStateUserStatusChangedCopyWith<
@@ -6161,9 +6235,10 @@ class _$DnhRealtimeStatePostTemporaryUpdated
         liveViewCountReceived,
     required TResult Function(List<String> userIds, String? socketId)
         userStatusGet,
-    required TResult Function(String listUserStatus, String? socketId)
+    required TResult Function(
+            Map<String, dynamic> listUserStatus, String? socketId)
         userStatusReceived,
-    required TResult Function(String userStatus, String? socketId)
+    required TResult Function(Map<String, dynamic> userStatus, String? socketId)
         userStatusChanged,
     required TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)
@@ -6198,9 +6273,10 @@ class _$DnhRealtimeStatePostTemporaryUpdated
     TResult? Function(int postId, int liveTotalViewCount)?
         liveViewCountReceived,
     TResult? Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult? Function(String listUserStatus, String? socketId)?
+    TResult? Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult? Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult? Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult? Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,
@@ -6234,9 +6310,10 @@ class _$DnhRealtimeStatePostTemporaryUpdated
     TResult Function(dynamic data)? socketNetworkFailed,
     TResult Function(int postId, int liveTotalViewCount)? liveViewCountReceived,
     TResult Function(List<String> userIds, String? socketId)? userStatusGet,
-    TResult Function(String listUserStatus, String? socketId)?
+    TResult Function(Map<String, dynamic> listUserStatus, String? socketId)?
         userStatusReceived,
-    TResult Function(String userStatus, String? socketId)? userStatusChanged,
+    TResult Function(Map<String, dynamic> userStatus, String? socketId)?
+        userStatusChanged,
     TResult Function(
             int postId, String shopId, String stateKind, int stateKindValue)?
         postTemporaryUpdated,

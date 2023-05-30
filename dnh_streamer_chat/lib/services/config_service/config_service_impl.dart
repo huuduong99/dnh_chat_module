@@ -1,234 +1,195 @@
-import 'dart:convert';
-
-
-import 'package:dnh_chat_model/dnh_chat_model.dart';
-import 'package:rest_client/rest_client.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:hive_flutter/adapters.dart';
 
 import 'config_service.dart';
 
 class ConfigServiceImpl extends ConfigService {
-  late SharedPreferences sp;
+  /// Whether the secure storage service is initialized.
+  bool _isInitialized = false;
+  late Box _box;
 
   @override
   Future<void> init() async {
-    sp = await SharedPreferences.getInstance();
-  }
-
-  String? _socketId;
-
-  @override
-  String get accessToken => sp.getString('accessToken') ?? '';
-
-  @override
-  String? get refreshToken => sp.getString('refreshToken') ?? '';
-
-  @override
-  String? get baseUrl => sp.getString('baseUrl');
-
-  @override
-  int? get expiresIn => sp.getInt('expiresIn');
-
-  @override
-  String? get phoneNumber => sp.getString('phoneNumber') ?? '';
-
-  @override
-  String get shopId => sp.getString('shopId') ?? '';
-
-  @override
-  String? get tokenType => sp.getString('tokenType');
-
-  @override
-  String? get shopName => sp.getString('shopName') ?? 'Shop Huỳnh Vinh';
-
-  @override
-  String get notificationSocketUrl =>
-      sp.getString('notificationSocketUrl') ?? '';
-
-  @override
-  String get notificationServerUrl =>
-      sp.getString('notificationServerUrl') ?? '';
-
-  @override
-  String get fcmToken => sp.getString('fcmToken') ?? '';
-
-  @override
-  Shop get shop {
-    final String? result = sp.getString('shop');
-
-    if (result != null && result != 'null') {
-      return Shop.fromJson((json.decode(result)));
+    if (_isInitialized) {
+      return;
     }
-
-    return const Shop();
+    _box = await Hive.openBox<dynamic>(
+      'configStorage',
+    );
+    _isInitialized = true;
   }
 
   @override
-  set expiresIn(int? value) {
-    sp.setInt('expiresIn', value ?? 0);
+  String get baseUrl => _box.get('serverUrl', defaultValue: '') as String;
+
+  @override
+  String get chatApiUrl =>
+      _box.get('chatServerUrl', defaultValue: '') as String;
+
+  @override
+  String get socketUrl =>
+      _box.get('socketIOServerUrl', defaultValue: '') as String;
+
+  @override
+  String get accessToken => _box.get('accessToken', defaultValue: '') as String;
+
+  @override
+  int? get loginTokenExpiresTime =>
+      _box.get('loginTokenExpiresTime', defaultValue: null) as int?;
+
+  @override
+  String get tokenType =>
+      _box.get('tokenType', defaultValue: 'Bearer') as String;
+
+  @override
+  String get refreshToken =>
+      _box.get('refreshToken', defaultValue: '') as String;
+
+  @override
+  String? get scopes => _box.get('scopes', defaultValue: null) as String?;
+
+  @override
+  bool get isNewUser => _box.get('isNewUser', defaultValue: false) as bool;
+
+  @override
+  String get shopId => _box.get('shopId', defaultValue: '') as String;
+
+  @override
+  String get userId => _box.get('userId', defaultValue: '') as String;
+
+  @override
+  String get shopName => _box.get('shopName', defaultValue: '') as String;
+
+  @override
+  String get shopAvatar => _box.get('shopAvatar', defaultValue: '') as String;
+
+  @override
+  String get chatSocketUrl =>
+      _box.get('socketIOServerChatUrl', defaultValue: '') as String;
+
+  @override
+  @override
+  Future<void> setBaseUrl(String value) async {
+    await _box.put('serverUrl', value);
   }
 
   @override
-  set phoneNumber(String? value) {
-    sp.setString('phoneNumber', value ?? '');
+  Future<void> setSocketUrl(String value) async {
+    await _box.put('socketIOServerUrl', value);
   }
 
   @override
-  set shopId(String value) {
-    sp.setString('shopId', value);
+  Future<void> setAccessToken(String value) async {
+    await _box.put('accessToken', value);
   }
 
   @override
-  set tokenType(String? value) {
-    sp.setString('tokenType', value ?? '');
+  Future<void> setLoginTokenExpiresTime(int value) async {
+    await _box.put('loginTokenExpiresTime', value);
   }
 
   @override
-  set shopName(String? value) {
-    sp.setString('shopName', value ?? '');
+  Future<void> setTokenType(String value) async {
+    await _box.put('tokenType', value);
   }
 
   @override
-  String? get socketId => _socketId;
-
-  @override
-  set shop(Shop shop) {
-    String shopStr = jsonEncode(shop.toJson());
-    sp.setString('shop', shopStr);
+  Future<void> setChatApiUrl(String value) async {
+    await _box.put('chatServerUrl', value);
   }
 
   @override
-  String get password => sp.getString('password') ?? '';
-
-  @override
-  set accessToken(String? value) {
-    sp.setString('accessToken', value ?? '');
+  Future<void> setRefreshToken(String value) async {
+    await _box.put('refreshToken', value);
   }
 
   @override
-  List<Shop> get shops {
-    List<Shop> shops = [];
-
-    final String result = sp.getString('shops') ?? '';
-
-    if (result != '') {
-      shops =
-          (json.decode(result) as List).map((e) => Shop.fromJson(e)).toList();
-    }
-
-    return shops;
+  Future<void> setScopes(String? value) async {
+    await _box.put('scopes', value);
   }
 
   @override
-  set shops(List<Shop> shops) {
-    final String shopsStr = jsonEncode(shops);
-    sp.setString('shops', shopsStr);
+  Future<void> setIsNewUser(bool value) async {
+    await _box.put('isNewUser', value);
   }
 
   @override
-  set refreshToken(String? value) {
-    sp.setString('refreshToken', value ?? '');
+  @override
+  Future<void> setShopId(String shopId) async {
+    await _box.put('shopId', shopId);
   }
 
   @override
-  set password(String value) {
-    sp.setString('password', value);
+  Future<void> setUserId(String userId) async {
+    await _box.put('userId', userId);
   }
 
   @override
-  set notificationSocketUrl(String value) {
-    sp.setString('notificationSocketUrl', value);
+  Future<void> setShopName(String shopName) async {
+    await _box.put('shopName', shopName);
   }
 
   @override
-  set notificationServerUrl(String value) {
-    sp.setString('notificationServerUrl', value);
+  Future<void> setShopAvatar(String shopAvatar) async {
+    await _box.put('shopAvatar', shopAvatar);
   }
 
   @override
-  set fcmToken(String? value) {
-    sp.setString('fcmToken', value ?? '');
+  Future<void> clear() async {
+    await _box.put('serverUrl', '');
+    await _box.put('accessToken', '');
+    await _box.put('loginTokenExpiresTime', 0);
+    await _box.put('tokenType', '');
+    await _box.put('refreshToken', '');
+    await _box.put('scopes', '');
+    await _box.put('isNewUser', false);
+    await _box.put('socketId', '');
+    await _box.put('shopId', '');
+    await _box.put('socketNotifyServerUrl', '');
+    await _box.put('fcmToken', '');
+    await _box.put('secretLocalKey', '');
+    await _box.put('fcmTokenTime', null);
+    await _box.put('isBlockShop', false);
+    await _box.put('useHls', false);
+    await _box.put('showPlayerConfig', false);
+    await _box.put('notificationTopic', '');
+    await _box.put('errorMessages', '');
   }
 
   @override
-  String get tenantId => '1550572009310292';
-
-  @override
-  String get userEmail => sp.getString('email') ?? '';
-
-  @override
-  set userEmail(String value) {
-    sp.setString('email', value);
+  Future<void> setChatSocketUrl(String value) async {
+    await _box.put('socketIOServerChatUrl', value);
   }
 
   @override
-  String? get socketNativeId => sp.getString('socketNativeId');
-
-  @override
-  set socketNativeId(String? value) {
-    sp.setString('socketNativeId', value ?? '');
+  Future<void> setUserName(String userName) async {
+    await _box.put('userName', userName);
   }
 
   @override
-  String? get dataTest => sp.getString('dataTest');
+  String get userName => _box.get('userName', defaultValue: '') as String;
 
   @override
-  String get hashKey {
-    String key = '';
-    String? baseUrl = sp.getString('baseUrl');
-    if (baseUrl != null) {
-      switch (baseUrl) {
-        case 'https://app.live.dev.tmtco.org':
-          key = 'EUHPEBZvP6C7qBu7';
-          break;
-        case 'https://app.live.tmtco.org':
-          key = 'cIETAgH7IasRxTre';
-          break;
-      }
-    }
-    return key;
-  }
-
-
-  @override
-  set priorShopId(String value) {
-    sp.setString('priorShopId', value);
+  Future<void> setPhone(String phone) async {
+    await _box.put('phone', phone);
   }
 
   @override
-  String get priorShopId => sp.getString('priorShopId') ?? '';
+  String get phone => _box.get('phone', defaultValue: '') as String;
 
   @override
-  String get tDeskApiUrl => sp.getString('tDeskApiUrl') ?? '';
+  String get password => _box.get('password', defaultValue: '') as String;
 
   @override
-  String get tDeskSearchApiUrl => sp.getString('tDeskSearchApiUrl') ?? '';
-
-  @override
-  int get diffTimeMilliseconds => sp.getInt('diffTimeMilliseconds') ?? 0;
-
-  @override
-  set diffTimeMilliseconds(int value) {
-    sp.setInt('diffTimeMilliseconds', value);
+  Future<void> setPassword(String password) async {
+    await _box.put('password', password);
   }
 
   @override
-  List<Message> get errorMessages {
-    List<Message> errorMessages = [];
-    final String result = sp.getString('errorMessages') ?? '';
-
-    // if (result != '') {
-    //   errorMessages = (json.decode(result) as List)
-    //       .map((e) => Message.fromJson(e))
-    //       .toList();
-    // }
-
-    return errorMessages;
-  }
+  String get secretSocketKey =>
+      _box.get('secretSocketKey', defaultValue: '') as String;
 
   @override
-  set errorMessages(List<Message> errorMessages) {
-    final String errorMessagesStr = jsonEncode(errorMessages);
-    sp.setString('errorMessages', errorMessagesStr);
+  Future<void> setSecretSocketKey(String secretKey) async {
+    await _box.put('secretSocketKey', secretKey);
   }
 }

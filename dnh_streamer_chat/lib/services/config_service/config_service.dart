@@ -1,94 +1,78 @@
-
-import 'package:dnh_chat_model/dnh_chat_model.dart';
-import 'package:rest_client/rest_client.dart';
-
 abstract class ConfigService {
-  String get tenantId;
+  Future<void> init();
+
+  String get baseUrl;
+
+  Future<void> setBaseUrl(String value);
+
+  String get socketUrl;
+
+  Future<void> setSocketUrl(String value);
+
+  String get chatApiUrl;
+
+  Future<void> setChatApiUrl(String value);
+
+  String get chatSocketUrl;
+
+  Future<void> setChatSocketUrl(String value);
 
   String get accessToken;
 
-  String? get refreshToken;
+  Future<void> setAccessToken(String value);
 
-  int? get expiresIn;
+  ///timestamp
+  int? get loginTokenExpiresTime;
 
-  String? get phoneNumber;
+  Future<void> setLoginTokenExpiresTime(int value);
 
-  String? get baseUrl;
+  String get tokenType;
 
-  String? get tokenType;
+  Future<void> setTokenType(String value);
+
+  String get refreshToken;
+
+  Future<void> setRefreshToken(String value);
+
+  String? get scopes;
+
+  Future<void> setScopes(String? value);
+
+  bool get isNewUser;
+
+  Future<void> setIsNewUser(bool value);
 
   String get shopId;
 
-  String get priorShopId;
+  Future<void> setShopId(String shopId);
 
-  String? get shopName;
+  String get shopName;
 
-  String? get socketId;
+  Future<void> setShopName(String shopName);
 
-  String? get socketNativeId;
+  String get shopAvatar;
 
-  Shop get shop;
+  Future<void> setShopAvatar(String shopAvatar);
 
-  List<Shop> get shops;
+  String get userId;
+
+  Future<void> setUserId(String userId);
+
+  String get userName;
+
+  Future<void> setUserName(String userName);
+
+  String get phone;
+
+  Future<void> setPhone(String phone);
 
   String get password;
 
-  String get notificationSocketUrl;
+  Future<void> setPassword(String password);
 
-  String get notificationServerUrl;
+  String get secretSocketKey;
 
-  String get fcmToken;
+  Future<void> setSecretSocketKey(String secretKey);
 
-  String? get dataTest;
-
-  String get userEmail;
-
-  String get hashKey;
-
-  set userEmail(String value);
-
-  set accessToken(String? value);
-
-  set refreshToken(String? value);
-
-  set expiresIn(int? value);
-
-  set phoneNumber(String? value);
-
-  set tokenType(String? value);
-
-  set shopId(String value);
-
-  set priorShopId(String value);
-
-  set shopName(String? value);
-
-  set password(String value);
-
-  set shop(Shop shop);
-
-  set shops(List<Shop> shops);
-
-  set notificationSocketUrl(String value);
-
-  set notificationServerUrl(String value);
-
-  set fcmToken(String? value);
-
-  set socketNativeId(String? value);
-
-
-  String get tDeskApiUrl;
-
-  String get tDeskSearchApiUrl;
-
-  int get diffTimeMilliseconds;
-
-  set diffTimeMilliseconds(int value);
-
-  List<Message> get errorMessages;
-
-  set errorMessages(List<Message> errorMessages);
-
-  Future<void> init();
+  Future<void> clear();
 }

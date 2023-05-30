@@ -28,11 +28,11 @@ String formatBytes(int size, [int fractionDigits = 2]) {
 }
 
 /// Returns user avatar and name color based on the ID
-Color getUserAvatarNameColor(types.User user, List<Color> colors) =>
+Color getUserAvatarNameColor(types.Author user, List<Color> colors) =>
     colors[user.id.hashCode % colors.length];
 
 /// Returns user initials (can have only first letter of firstName/lastName or both)
-String getUserInitials(types.User user) {
+String getUserInitials(types.Author user) {
   String initials = '';
 
   if ((user.firstName ?? '').isNotEmpty) {
@@ -47,7 +47,7 @@ String getUserInitials(types.User user) {
 }
 
 /// Returns user name as joined firstName and lastName
-String getUserName(types.User user) =>
+String getUserName(types.Author user) =>
     '${user.firstName ?? ''} ${user.lastName ?? ''}'.trim();
 
 /// Returns formatted date used as a divider between different days in the
@@ -132,7 +132,7 @@ bool isConsistsOfEmojis(
 /// returns them with a gallery
 List<Object> calculateChatMessages(
   List<types.Message> messages,
-  types.User user, {
+  types.Author user, {
   String Function(DateTime)? customDateHeaderText,
   DateFormat? dateFormat,
   required int dateHeaderThreshold,

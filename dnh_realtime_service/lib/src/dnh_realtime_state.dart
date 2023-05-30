@@ -88,12 +88,12 @@ class DnhRealtimeState with _$DnhRealtimeState {
   }) = DnhRealtimeStateShopStatusGet;
 
   const factory DnhRealtimeState.userStatusReceived({
-    required String listUserStatus,
+    required Map<String,dynamic> listUserStatus,
     String? socketId,
   }) = DnhRealtimeStateUserStatusReceived;
 
   const factory DnhRealtimeState.userStatusChanged({
-    required String userStatus,
+    required Map<String,dynamic> userStatus,
     String? socketId,
   }) = DnhRealtimeStateUserStatusChanged;
 

@@ -1,3 +1,4 @@
+import 'package:dnh_streamer_chat/modules/chat/conversation/bloc/conversation_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 import '../modules/application/bloc/application_bloc.dart';
@@ -7,15 +8,32 @@ class BLocInjector {
   BLocInjector._();
 
   static void register(GetIt injector) {
-    injector.registerLazySingleton<ApplicationBloc>(
-      () => ApplicationBloc(secureConfigService: injector()),
-    );
-
     injector.registerFactory<LoginBloc>(
       () => LoginBloc(
         secureConfigService: injector(),
-        authenticationAPI: injector(),
+        authenticationApi: injector(),
       ),
+    );
+
+
+    injector.registerLazySingleton<ConversationBloc>(
+      () => ConversationBloc(
+        secureConfigService: injector(),
+        conversationApi: injector(),
+        // realtimeHubService: injector(),
+        // streamerChatRealtimeHubService: injector(),
+      ),
+    );
+
+    injector.registerLazySingleton<ApplicationBloc>(
+          () {
+        return ApplicationBloc(
+          dioModule: injector(),
+          secureConfigService: injector(),
+          // dnhRealtimeService: injector(),
+          // dnhChatRealtimeService: injector(),
+        );
+      },
     );
   }
 }

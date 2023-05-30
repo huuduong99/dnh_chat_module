@@ -18,13 +18,13 @@ class UserAvatar extends StatelessWidget {
   }) : super(key: key);
 
   /// Author to show image and name initials from.
-  final types.User author;
+  final types.Author author;
 
   /// See [Message.bubbleRtlAlignment].
   final BubbleRtlAlignment? bubbleRtlAlignment;
 
   /// Called when user taps on an avatar.
-  final void Function(types.User)? onAvatarTap;
+  final void Function(types.Author)? onAvatarTap;
 
   @override
   Widget build(BuildContext context) {

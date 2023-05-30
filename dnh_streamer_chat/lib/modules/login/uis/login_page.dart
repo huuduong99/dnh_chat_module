@@ -1,5 +1,5 @@
-
 import 'package:dnh_streamer_chat/gen/assets.gen.dart';
+import 'package:dnh_streamer_chat/modules/application/bloc/application_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -38,11 +38,12 @@ class _LoginPageState extends State<LoginPage> {
     return BlocProvider<LoginBloc>.value(
       value: _loginBloc,
       child: BlocListener<LoginBloc, LoginState>(
-        listenWhen: (prev, current) => prev.notification != current.notification,
+        listenWhen: (prev, current) =>
+            prev.notification != current.notification,
         listener: (context, state) {
           state.notification?.when(
             loginSuccess: () {
-
+              context.read<ApplicationBloc>().add(ApplicationEvent.loaded());
             },
             showNotification:
                 (String? title, String? message, NotificationType type) {
@@ -133,9 +134,7 @@ class _Email extends StatelessWidget {
           },
           prefixIcon: Stack(
             alignment: Alignment.center,
-            children: [
-              Assets.icons.email.svg(width: 22, height: 22),
-            ],
+            children: const [Icon(Icons.phone)],
           ),
           errorMessage: state.errorPhone,
         );
@@ -168,9 +167,7 @@ class _Password extends StatelessWidget {
           },
           prefixIcon: Stack(
             alignment: Alignment.center,
-            children: [
-              Assets.icons.email.svg(width: 24, height: 24),
-            ],
+            children: const [Icon(Icons.lock)],
           ),
           errorMessage: state.errorPassword,
         );

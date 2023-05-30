@@ -20,10 +20,10 @@ part 'login_state.dart';
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   LoginBloc({
     required ConfigService secureConfigService,
-    required AuthenticationAPI authenticationAPI,
+    required AuthenticationApi authenticationApi,
   }) : super(const LoginState()) {
     _secureConfigService = secureConfigService;
-    _authenticationAPi = authenticationAPI;
+    _authenticationAPi = authenticationApi;
 
     on<_LoginPhoneChanged>(_onPhoneChanged);
     on<_LoginPasswordChanged>(_onPasswordChanged);
@@ -31,7 +31,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   }
 
   late final ConfigService _secureConfigService;
-  late final AuthenticationAPI _authenticationAPi;
+  late final AuthenticationApi _authenticationAPi;
   final _logger = getLogger('LoginBloc');
 
   FutureOr<void> _onPhoneChanged(
@@ -103,10 +103,10 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         passWord: event.password,
       );
 
-      _secureConfigService.accessToken = result.accessToken;
-      _secureConfigService.refreshToken = result.refreshToken;
-      _secureConfigService.phoneNumber = event.phone;
-      _secureConfigService.password = event.password;
+      _secureConfigService.setAccessToken(result.accessToken ?? '');
+      _secureConfigService.setRefreshToken(result.refreshToken ?? '');
+      _secureConfigService.setPhone(event.phone);
+      _secureConfigService.setPassword(event.password);
 
       emit(
         state.copyWith(

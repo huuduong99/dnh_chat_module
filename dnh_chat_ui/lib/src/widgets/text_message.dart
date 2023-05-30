@@ -59,7 +59,7 @@ class TextMessage extends StatelessWidget {
   }
 
   Widget _linkPreview(
-    types.User user,
+    types.Author user,
     double width,
     BuildContext context,
   ) {
@@ -101,7 +101,7 @@ class TextMessage extends StatelessWidget {
   }
 
   Widget _textWidgetBuilder(
-    types.User user,
+    types.Author user,
     BuildContext context,
     bool enlargeEmojis,
   ) {

@@ -5,9 +5,9 @@ import '../../../rest_client.dart';
 part 'authentication_api.g.dart';
 
 @RestApi()
-abstract class AuthenticationAPI {
+abstract class AuthenticationApi {
   /// Constructor with Dio param
-  factory AuthenticationAPI(Dio dio, {String baseUrl}) = _AuthenticationAPI;
+  factory AuthenticationApi(Dio dio, {String baseUrl}) = _AuthenticationApi;
 
   @POST('/api/v1/sign-in/password')
   Future<LoginResult> signIn({

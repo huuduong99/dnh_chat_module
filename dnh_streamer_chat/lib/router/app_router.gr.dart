@@ -17,6 +17,12 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    StartRoute.name: (routeData) {
+      return AdaptivePage<dynamic>(
+        routeData: routeData,
+        child: const StartPage(),
+      );
+    },
     LoginRoute.name: (routeData) {
       return AdaptivePage<dynamic>(
         routeData: routeData,
@@ -33,16 +39,6 @@ class _$AppRouter extends RootStackRouter {
       return AdaptivePage<dynamic>(
         routeData: routeData,
         child: const ConversationSearchPage(),
-      );
-    },
-    ChatRoute.name: (routeData) {
-      final args = routeData.argsAs<ChatRouteArgs>();
-      return AdaptivePage<dynamic>(
-        routeData: routeData,
-        child: ChatPage(
-          key: args.key,
-          conversation: args.conversation,
-        ),
       );
     },
     MessageSearchRoute.name: (routeData) {
@@ -66,6 +62,10 @@ class _$AppRouter extends RootStackRouter {
   @override
   List<RouteConfig> get routes => [
         RouteConfig(
+          StartRoute.name,
+          path: '/',
+        ),
+        RouteConfig(
           LoginRoute.name,
           path: '/login',
         ),
@@ -78,20 +78,28 @@ class _$AppRouter extends RootStackRouter {
           path: '/conversationSearch',
         ),
         RouteConfig(
-          ChatRoute.name,
-          path: '/chat',
-        ),
-        RouteConfig(
           MessageSearchRoute.name,
           path: '/messageSearch',
         ),
         RouteConfig(
           '/#redirect',
           path: '/',
-          redirectTo: '/conversation',
+          redirectTo: '/',
           fullMatch: true,
         ),
       ];
+}
+
+/// generated route for
+/// [StartPage]
+class StartRoute extends PageRouteInfo<void> {
+  const StartRoute()
+      : super(
+          StartRoute.name,
+          path: '/',
+        );
+
+  static const String name = 'StartRoute';
 }
 
 /// generated route for
@@ -128,40 +136,6 @@ class ConversationSearchRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'ConversationSearchRoute';
-}
-
-/// generated route for
-/// [ChatPage]
-class ChatRoute extends PageRouteInfo<ChatRouteArgs> {
-  ChatRoute({
-    Key? key,
-    required Conversation conversation,
-  }) : super(
-          ChatRoute.name,
-          path: '/chat',
-          args: ChatRouteArgs(
-            key: key,
-            conversation: conversation,
-          ),
-        );
-
-  static const String name = 'ChatRoute';
-}
-
-class ChatRouteArgs {
-  const ChatRouteArgs({
-    this.key,
-    required this.conversation,
-  });
-
-  final Key? key;
-
-  final Conversation conversation;
-
-  @override
-  String toString() {
-    return 'ChatRouteArgs{key: $key, conversation: $conversation}';
-  }
 }
 
 /// generated route for

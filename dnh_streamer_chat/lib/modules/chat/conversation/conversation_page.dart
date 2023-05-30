@@ -20,6 +20,7 @@ class ConversationPage extends StatefulWidget {
 class _ConversationPageState extends State<ConversationPage> {
   @override
   void initState() {
+    context.read<ConversationBloc>().add(const ConversationEvent.loaded());
     super.initState();
   }
 

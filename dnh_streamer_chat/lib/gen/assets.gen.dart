@@ -14,6 +14,9 @@ import 'package:flutter/services.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/call.svg
+  SvgGenImage get call => const SvgGenImage('assets/icons/call.svg');
+
   /// File path: assets/icons/checkbox_check.svg
   SvgGenImage get checkboxCheck =>
       const SvgGenImage('assets/icons/checkbox_check.svg');
@@ -69,6 +72,7 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<dynamic> get values => [
+        call,
         checkboxCheck,
         download,
         email,
@@ -119,11 +123,23 @@ class $AssetsImagesGen {
       [emptyMessage, fcmGraph, icConversationEmpty, icon, noAvatar, noImage];
 }
 
+class $AssetsLaunchersGen {
+  const $AssetsLaunchersGen();
+
+  /// File path: assets/launchers/app_icon.png
+  AssetGenImage get appIcon =>
+      const AssetGenImage('assets/launchers/app_icon.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [appIcon];
+}
+
 class Assets {
   Assets._();
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsLaunchersGen launchers = $AssetsLaunchersGen();
 }
 
 class AssetGenImage {

@@ -22,60 +22,65 @@ class ConversationBloc extends Bloc<ConversationEvent, ConversationState> {
   ConversationBloc({
     required ConfigService secureConfigService,
     required ConversationApi conversationApi,
-    required DnhChatRealtimeService streamerChatRealtimeHubService,
-    required DnhRealtimeService realtimeHubService,
+    // required DnhChatRealtimeService streamerChatRealtimeHubService,
+    // required DnhRealtimeService realtimeHubService,
   }) : super(const ConversationState()) {
     _secureConfigService = secureConfigService;
     _conversationApi = conversationApi;
-    _streamerChatRealtimeHubService = streamerChatRealtimeHubService;
-    _realtimeHub = realtimeHubService;
+    // _streamerChatRealtimeHubService = streamerChatRealtimeHubService;
+    // _realtimeHub = realtimeHubService;
 
-    _subscription.add(
-      _realtimeHub.stream.listen(
-        (DnhRealtimeState event) {
-          event.whenOrNull(
-            userStatusReceived: (listUserStatus, socketId) {
-              add(
-                ConversationEvent.userStatusReceived(
-                  listUserStatus: listUserStatus,
-                ),
-              );
-            },
-            userStatusChanged: (userStatus, socketId) {
-              add(
-                ConversationEvent.userStatusChanged(
-                  userStatus: UserStatus.fromJson(userStatus),
-                ),
-              );
-            },
-          );
-        },
-      ),
-    );
+    // _subscription.add(
+      // _realtimeHub.stream.listen(
+      //   (DnhRealtimeState event) {
+      //     event.whenOrNull(
+      //       userStatusReceived: (userStatus, socketId) {
+      //         final List<UserStatus> listUserStatus = (userStatus as List)
+      //             .map((e) => UserStatus.fromJson(e))
+      //             .toList();
+      //
+      //         add(
+      //           ConversationEvent.userStatusReceived(
+      //             listUserStatus: listUserStatus,
+      //           ),
+      //         );
+      //       },
+      //       userStatusChanged: (userStatus, socketId) {
+      //         add(
+      //           ConversationEvent.userStatusChanged(
+      //             userStatus: UserStatus.fromJson(userStatus),
+      //           ),
+      //         );
+      //       },
+      //     );
+      //   },
+      // ),
+    // );
 
-    _subscription.add(
-      _streamerChatRealtimeHubService.stream.listen(
-        (DnhChatRealtimeState event) {
-          event.whenOrNull(
-            messageCreated: (message, socketId) {
-              add(ConversationEvent.realtimeMessageCreated(message: AppMessage.fromJson(message)));
-            },
-            messageSeen: (recipientId, senderId, seenTime, conversationId,
-                sendFrom, socketId) {
-              add(
-                ConversationEvent.realtimeMessageSeenReceived(
-                  seenTime: seenTime,
-                  senderId: senderId,
-                  recipientId: recipientId,
-                  conversationId: conversationId,
-                  sendFrom: SendFrom.fromValue(sendFrom),
-                ),
-              );
-            },
-          );
-        },
-      ),
-    );
+    // _subscription.add(
+    //   _streamerChatRealtimeHubService.stream.listen(
+    //     (DnhChatRealtimeState event) {
+    //       event.whenOrNull(
+    //         messageCreated: (message, socketId) {
+    //           add(ConversationEvent.realtimeMessageCreated(
+    //               message: AppMessage.fromJson(message)));
+    //         },
+    //         messageSeen: (recipientId, senderId, seenTime, conversationId,
+    //             sendFrom, socketId) {
+    //           add(
+    //             ConversationEvent.realtimeMessageSeenReceived(
+    //               seenTime: seenTime,
+    //               senderId: senderId,
+    //               recipientId: recipientId,
+    //               conversationId: conversationId,
+    //               sendFrom: SendFrom.fromValue(sendFrom),
+    //             ),
+    //           );
+    //         },
+    //       );
+    //     },
+    //   ),
+    // );
 
     on<ConversationLoaded>(_onLoaded);
     on<ConversationLoadedMore>(_onLoadedMore);
@@ -88,9 +93,9 @@ class ConversationBloc extends Bloc<ConversationEvent, ConversationState> {
 
   late final ConfigService _secureConfigService;
 
-  late final DnhChatRealtimeService _streamerChatRealtimeHubService;
+  // late final DnhChatRealtimeService _streamerChatRealtimeHubService;
   final CompositeSubscription _subscription = CompositeSubscription();
-  late final DnhRealtimeService _realtimeHub;
+  // late final DnhRealtimeService _realtimeHub;
   late final ConversationApi _conversationApi;
   final _logger = getLogger('ConversationBloc');
 
@@ -149,7 +154,7 @@ class ConversationBloc extends Bloc<ConversationEvent, ConversationState> {
       }
     }
 
-    _realtimeHub.getUsersStatus(userIds);
+    // _realtimeHub.getUsersStatus(userIds);
   }
 
   FutureOr<void> _onLoadedMore(

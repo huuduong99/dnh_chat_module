@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$ApplicationEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loaded,
+    required TResult Function(AppConfig? appConfig) loaded,
     required TResult Function() logoutRequested,
     required TResult Function(String locale) localeChanged,
     required TResult Function(bool isDarkMode) themeChanged,
@@ -26,7 +26,7 @@ mixin _$ApplicationEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loaded,
+    TResult? Function(AppConfig? appConfig)? loaded,
     TResult? Function()? logoutRequested,
     TResult? Function(String locale)? localeChanged,
     TResult? Function(bool isDarkMode)? themeChanged,
@@ -34,7 +34,7 @@ mixin _$ApplicationEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loaded,
+    TResult Function(AppConfig? appConfig)? loaded,
     TResult Function()? logoutRequested,
     TResult Function(String locale)? localeChanged,
     TResult Function(bool isDarkMode)? themeChanged,
@@ -91,6 +91,8 @@ abstract class _$$ApplicationLoadedCopyWith<$Res> {
   factory _$$ApplicationLoadedCopyWith(
           _$ApplicationLoaded value, $Res Function(_$ApplicationLoaded) then) =
       __$$ApplicationLoadedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({AppConfig? appConfig});
 }
 
 /// @nodoc
@@ -100,60 +102,85 @@ class __$$ApplicationLoadedCopyWithImpl<$Res>
   __$$ApplicationLoadedCopyWithImpl(
       _$ApplicationLoaded _value, $Res Function(_$ApplicationLoaded) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? appConfig = freezed,
+  }) {
+    return _then(_$ApplicationLoaded(
+      appConfig: freezed == appConfig
+          ? _value.appConfig
+          : appConfig // ignore: cast_nullable_to_non_nullable
+              as AppConfig?,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$ApplicationLoaded implements ApplicationLoaded {
-  _$ApplicationLoaded();
+  _$ApplicationLoaded({this.appConfig});
+
+  @override
+  final AppConfig? appConfig;
 
   @override
   String toString() {
-    return 'ApplicationEvent.loaded()';
+    return 'ApplicationEvent.loaded(appConfig: $appConfig)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ApplicationLoaded);
+        (other.runtimeType == runtimeType &&
+            other is _$ApplicationLoaded &&
+            (identical(other.appConfig, appConfig) ||
+                other.appConfig == appConfig));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, appConfig);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ApplicationLoadedCopyWith<_$ApplicationLoaded> get copyWith =>
+      __$$ApplicationLoadedCopyWithImpl<_$ApplicationLoaded>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loaded,
+    required TResult Function(AppConfig? appConfig) loaded,
     required TResult Function() logoutRequested,
     required TResult Function(String locale) localeChanged,
     required TResult Function(bool isDarkMode) themeChanged,
   }) {
-    return loaded();
+    return loaded(appConfig);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loaded,
+    TResult? Function(AppConfig? appConfig)? loaded,
     TResult? Function()? logoutRequested,
     TResult? Function(String locale)? localeChanged,
     TResult? Function(bool isDarkMode)? themeChanged,
   }) {
-    return loaded?.call();
+    return loaded?.call(appConfig);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loaded,
+    TResult Function(AppConfig? appConfig)? loaded,
     TResult Function()? logoutRequested,
     TResult Function(String locale)? localeChanged,
     TResult Function(bool isDarkMode)? themeChanged,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded();
+      return loaded(appConfig);
     }
     return orElse();
   }
@@ -197,7 +224,12 @@ class _$ApplicationLoaded implements ApplicationLoaded {
 }
 
 abstract class ApplicationLoaded implements ApplicationEvent {
-  factory ApplicationLoaded() = _$ApplicationLoaded;
+  factory ApplicationLoaded({final AppConfig? appConfig}) = _$ApplicationLoaded;
+
+  AppConfig? get appConfig;
+  @JsonKey(ignore: true)
+  _$$ApplicationLoadedCopyWith<_$ApplicationLoaded> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -241,7 +273,7 @@ class _$ApplicationLogoutRequested implements ApplicationLogoutRequested {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loaded,
+    required TResult Function(AppConfig? appConfig) loaded,
     required TResult Function() logoutRequested,
     required TResult Function(String locale) localeChanged,
     required TResult Function(bool isDarkMode) themeChanged,
@@ -252,7 +284,7 @@ class _$ApplicationLogoutRequested implements ApplicationLogoutRequested {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loaded,
+    TResult? Function(AppConfig? appConfig)? loaded,
     TResult? Function()? logoutRequested,
     TResult? Function(String locale)? localeChanged,
     TResult? Function(bool isDarkMode)? themeChanged,
@@ -263,7 +295,7 @@ class _$ApplicationLogoutRequested implements ApplicationLogoutRequested {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loaded,
+    TResult Function(AppConfig? appConfig)? loaded,
     TResult Function()? logoutRequested,
     TResult Function(String locale)? localeChanged,
     TResult Function(bool isDarkMode)? themeChanged,
@@ -383,7 +415,7 @@ class _$ApplicationLocaleChanged implements ApplicationLocaleChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loaded,
+    required TResult Function(AppConfig? appConfig) loaded,
     required TResult Function() logoutRequested,
     required TResult Function(String locale) localeChanged,
     required TResult Function(bool isDarkMode) themeChanged,
@@ -394,7 +426,7 @@ class _$ApplicationLocaleChanged implements ApplicationLocaleChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loaded,
+    TResult? Function(AppConfig? appConfig)? loaded,
     TResult? Function()? logoutRequested,
     TResult? Function(String locale)? localeChanged,
     TResult? Function(bool isDarkMode)? themeChanged,
@@ -405,7 +437,7 @@ class _$ApplicationLocaleChanged implements ApplicationLocaleChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loaded,
+    TResult Function(AppConfig? appConfig)? loaded,
     TResult Function()? logoutRequested,
     TResult Function(String locale)? localeChanged,
     TResult Function(bool isDarkMode)? themeChanged,
@@ -531,7 +563,7 @@ class _$ApplicationThemeChanged implements ApplicationThemeChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loaded,
+    required TResult Function(AppConfig? appConfig) loaded,
     required TResult Function() logoutRequested,
     required TResult Function(String locale) localeChanged,
     required TResult Function(bool isDarkMode) themeChanged,
@@ -542,7 +574,7 @@ class _$ApplicationThemeChanged implements ApplicationThemeChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loaded,
+    TResult? Function(AppConfig? appConfig)? loaded,
     TResult? Function()? logoutRequested,
     TResult? Function(String locale)? localeChanged,
     TResult? Function(bool isDarkMode)? themeChanged,
@@ -553,7 +585,7 @@ class _$ApplicationThemeChanged implements ApplicationThemeChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loaded,
+    TResult Function(AppConfig? appConfig)? loaded,
     TResult Function()? logoutRequested,
     TResult Function(String locale)? localeChanged,
     TResult Function(bool isDarkMode)? themeChanged,
@@ -757,7 +789,8 @@ abstract class _LogoutSuccess implements AppNotification {
 /// @nodoc
 mixin _$ApplicationState {
   LoadingStatus get status => throw _privateConstructorUsedError;
-  dynamic get isAuthenticated => throw _privateConstructorUsedError;
+  bool get isAuthenticated => throw _privateConstructorUsedError;
+  AppConfig? get appConfig => throw _privateConstructorUsedError;
   AppNotification? get notification => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -773,7 +806,8 @@ abstract class $ApplicationStateCopyWith<$Res> {
   @useResult
   $Res call(
       {LoadingStatus status,
-      dynamic isAuthenticated,
+      bool isAuthenticated,
+      AppConfig? appConfig,
       AppNotification? notification});
 
   $LoadingStatusCopyWith<$Res> get status;
@@ -794,7 +828,8 @@ class _$ApplicationStateCopyWithImpl<$Res, $Val extends ApplicationState>
   @override
   $Res call({
     Object? status = null,
-    Object? isAuthenticated = freezed,
+    Object? isAuthenticated = null,
+    Object? appConfig = freezed,
     Object? notification = freezed,
   }) {
     return _then(_value.copyWith(
@@ -802,10 +837,14 @@ class _$ApplicationStateCopyWithImpl<$Res, $Val extends ApplicationState>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as LoadingStatus,
-      isAuthenticated: freezed == isAuthenticated
+      isAuthenticated: null == isAuthenticated
           ? _value.isAuthenticated
           : isAuthenticated // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as bool,
+      appConfig: freezed == appConfig
+          ? _value.appConfig
+          : appConfig // ignore: cast_nullable_to_non_nullable
+              as AppConfig?,
       notification: freezed == notification
           ? _value.notification
           : notification // ignore: cast_nullable_to_non_nullable
@@ -844,7 +883,8 @@ abstract class _$$_ApplicationStateCopyWith<$Res>
   @useResult
   $Res call(
       {LoadingStatus status,
-      dynamic isAuthenticated,
+      bool isAuthenticated,
+      AppConfig? appConfig,
       AppNotification? notification});
 
   @override
@@ -865,7 +905,8 @@ class __$$_ApplicationStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? status = null,
-    Object? isAuthenticated = freezed,
+    Object? isAuthenticated = null,
+    Object? appConfig = freezed,
     Object? notification = freezed,
   }) {
     return _then(_$_ApplicationState(
@@ -873,9 +914,14 @@ class __$$_ApplicationStateCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as LoadingStatus,
-      isAuthenticated: freezed == isAuthenticated
-          ? _value.isAuthenticated!
-          : isAuthenticated,
+      isAuthenticated: null == isAuthenticated
+          ? _value.isAuthenticated
+          : isAuthenticated // ignore: cast_nullable_to_non_nullable
+              as bool,
+      appConfig: freezed == appConfig
+          ? _value.appConfig
+          : appConfig // ignore: cast_nullable_to_non_nullable
+              as AppConfig?,
       notification: freezed == notification
           ? _value.notification
           : notification // ignore: cast_nullable_to_non_nullable
@@ -890,6 +936,7 @@ class _$_ApplicationState implements _ApplicationState {
   const _$_ApplicationState(
       {this.status = const LoadingStatus.initial(),
       this.isAuthenticated = false,
+      this.appConfig,
       this.notification});
 
   @override
@@ -897,13 +944,15 @@ class _$_ApplicationState implements _ApplicationState {
   final LoadingStatus status;
   @override
   @JsonKey()
-  final dynamic isAuthenticated;
+  final bool isAuthenticated;
+  @override
+  final AppConfig? appConfig;
   @override
   final AppNotification? notification;
 
   @override
   String toString() {
-    return 'ApplicationState(status: $status, isAuthenticated: $isAuthenticated, notification: $notification)';
+    return 'ApplicationState(status: $status, isAuthenticated: $isAuthenticated, appConfig: $appConfig, notification: $notification)';
   }
 
   @override
@@ -912,15 +961,17 @@ class _$_ApplicationState implements _ApplicationState {
         (other.runtimeType == runtimeType &&
             other is _$_ApplicationState &&
             (identical(other.status, status) || other.status == status) &&
-            const DeepCollectionEquality()
-                .equals(other.isAuthenticated, isAuthenticated) &&
+            (identical(other.isAuthenticated, isAuthenticated) ||
+                other.isAuthenticated == isAuthenticated) &&
+            (identical(other.appConfig, appConfig) ||
+                other.appConfig == appConfig) &&
             (identical(other.notification, notification) ||
                 other.notification == notification));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, status,
-      const DeepCollectionEquality().hash(isAuthenticated), notification);
+  int get hashCode => Object.hash(
+      runtimeType, status, isAuthenticated, appConfig, notification);
 
   @JsonKey(ignore: true)
   @override
@@ -932,13 +983,16 @@ class _$_ApplicationState implements _ApplicationState {
 abstract class _ApplicationState implements ApplicationState {
   const factory _ApplicationState(
       {final LoadingStatus status,
-      final dynamic isAuthenticated,
+      final bool isAuthenticated,
+      final AppConfig? appConfig,
       final AppNotification? notification}) = _$_ApplicationState;
 
   @override
   LoadingStatus get status;
   @override
-  dynamic get isAuthenticated;
+  bool get isAuthenticated;
+  @override
+  AppConfig? get appConfig;
   @override
   AppNotification? get notification;
   @override

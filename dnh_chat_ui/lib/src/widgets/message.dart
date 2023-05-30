@@ -122,13 +122,13 @@ class Message extends StatelessWidget {
   final int messageWidth;
 
   /// Seen users
-  final List<types.User> seenUsers;
+  final List<types.Author> seenUsers;
 
   // Called when uses taps on an avatar
-  final void Function(types.User)? onAvatarTap;
+  final void Function(types.Author)? onAvatarTap;
 
   // Called when uses taps on seen user avatar
-  final void Function(types.User)? onSeenUserTap;
+  final void Function(types.Author)? onSeenUserTap;
 
   /// Called when user double taps on any message
   final void Function(BuildContext context, types.Message)? onMessageDoubleTap;
